@@ -2,7 +2,6 @@ ALTER TABLE "Y24GROUP054"."PARENT"
 ADD (
     -- Primary Key
     CONSTRAINT PRNT_ID_PK PRIMARY KEY ("PARENT_ID") ENABLE,
-
     -- Data validation
     CONSTRAINT VALIDATE_PRNT_EMAIL CHECK (
         REGEXP_LIKE (
@@ -10,9 +9,7 @@ ADD (
             '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'
         )
     ) ENABLE
-    
 );
-
 -- Comments 
 COMMENT ON COLUMN "Y24GROUP054"."PARENT"."PARENT_ID" IS 'Primary key of parent table.';
 COMMENT ON COLUMN "Y24GROUP054"."PARENT"."FIRST_NAME" IS 'Parent first name. Non-null values only.';

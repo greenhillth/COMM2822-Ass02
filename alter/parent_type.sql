@@ -2,22 +2,38 @@ ALTER TABLE "Y24GROUP054"."PARENT_TYPE"
 ADD (
     -- Primary Key
     CONSTRAINT PRNT_TYPE_RECORD_PK PRIMARY KEY ("RECORD_ID") ENABLE,
-
     -- Foreign Keys
     CONSTRAINT PTYPE_PRNT_FK FOREIGN KEY ("PARENT_ID") references "PARENT" ("PARENT_ID"),
     CONSTRAINT PTYPE_EMP_FK FOREIGN KEY ("EMPLOYEE_ID") references "EMPLOYEE" ("EMPLOYEE_ID"),
-
     --Data Validation
     CONSTRAINT VALID_TYPES CHECK (
         ("TYPE_ID", "TYPE_NAME") IN (
-            SELECT 1 AS "TYPE_ID", 'EMPLOYEE' AS "TYPE_NAME" FROM DUAL UNION ALL
-            SELECT 2 AS "TYPE_ID", 'UNSW_PHD' AS "TYPE_NAME" FROM DUAL UNION ALL
-            SELECT 3 AS "TYPE_ID", 'UNSW_STAFF' AS "TYPE_NAME" FROM DUAL UNION ALL
-            SELECT 4 AS "TYPE_ID", 'UNSW_PREVIOUS' AS "TYPE_NAME" FROM DUAL
+            SELECT
+                1 AS "TYPE_ID",
+                'EMPLOYEE' AS "TYPE_NAME"
+            FROM
+                DUAL
+            UNION ALL
+            SELECT
+                2 AS "TYPE_ID",
+                'UNSW_PHD' AS "TYPE_NAME"
+            FROM
+                DUAL
+            UNION ALL
+            SELECT
+                3 AS "TYPE_ID",
+                'UNSW_STAFF' AS "TYPE_NAME"
+            FROM
+                DUAL
+            UNION ALL
+            SELECT
+                4 AS "TYPE_ID",
+                'UNSW_PREVIOUS' AS "TYPE_NAME"
+            FROM
+                DUAL
         )
     )
 );
-
 COMMENT ON COLUMN "Y24GROUP054"."PARENT_TYPE"."RECORD_ID" IS 'Identifier record for given parent. Primary key.';
 COMMENT ON COLUMN "Y24GROUP054"."PARENT_TYPE"."TYPE_ID" IS 'Identifier of parent type. Holds a value of either 1 (Employee), 2 (PHD), 3 (UNSW Staff) or 4 (Ex-UNSW).';
 COMMENT ON COLUMN "Y24GROUP054"."PARENT_TYPE"."TYPE_NAME" IS 'Holds text representation of parent type. Type and number must match.';
