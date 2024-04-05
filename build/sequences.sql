@@ -1,0 +1,4 @@
+-- ID Generator Sequence - Uses a global ID value so no two id's are the same across tables.
+CREATE SEQUENCE  "Z5309693"."ID_SEQ"  MINVALUE 1 MAXVALUE 2147483647 INCREMENT BY 1 START WITH 101 NOCACHE  NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL;
+
+
