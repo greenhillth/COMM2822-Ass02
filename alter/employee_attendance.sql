@@ -1,0 +1,9 @@
+ALTER TABLE "Y24GROUP054"."EMPLOYEE_ATTENDANCE"
+ADD (
+    -- foreign keys
+    CONSTRAINT ATNDCE_EMP_FK foreign key ("EMPLOYEE_ID") references "EMPLOYEE" ("EMPLOYEE_ID") ENABLE,
+    CONSTRAINT ATNDCE_CLASS_FK foreign key ("CLASS_ID") references "CLASS" ("CLASS_ID") ENABLE,
+
+    -- data validation
+    CONSTRAINT DEP_AFT_ARR CHECK("DEPARTURE" > "ARRIVAL") ENABLE
+);

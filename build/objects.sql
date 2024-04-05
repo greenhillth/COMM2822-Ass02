@@ -13,3 +13,14 @@ CREATE OR REPLACE TYPE CONTACT AS OBJECT (
     address ADDR_OBJ,
     email VARCHAR2(20)
 );
+/*
+TODO - denormalise qualification entities as overlap unlikely 
+
+CREATE OR REPLACE TYPE QUALIFICATION AS OBJECT (
+    institution VARCHAR2(25),
+    date_attained VARCHAR2(25),
+    qualification_type VARCHAR2(25),
+);
+CREATE OR REPLACE TYPE QUALIFICATIONS AS TABLE OF QUALIFICATION;
+
+*/

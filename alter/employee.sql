@@ -1,6 +1,6 @@
 ALTER TABLE "Y24GROUP054"."EMPLOYEE"
 -- Constraints
-CONSTRAINT
+--CONSTRAINT
 -- Comments 
 COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."EMPLOYEE_ID" IS 'Primary key of employees table.';
 COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."FIRST_NAME" IS 'Employee first name. Non-null values only.';
