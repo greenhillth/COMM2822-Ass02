@@ -1,0 +1,7 @@
+ALTER TABLE "Y24GROUP054"."ACTIVITY"
+
+
+COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."ACTIVITY_ID" IS 'Primary key of Activity table.';
+COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."NAME" IS 'Activity Name. Not nullable';
+COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."DESCRIPTION" IS 'Activity Description. Max size: 50 chars.';
+COMMENT ON TABLE "Y24GROUP054"."ACTIVITY" IS 'Register of activities used by classes.';
