@@ -9,6 +9,7 @@ OR REPLACE PROCEDURE generateAttendance (
     startTime DATE;
     endTime DATE;
 BEGIN
+    -- Parse date strings to date obj
     startTime := to_date(classStart, 'DD-MM-YYYY HH:MI PM');
     endTime := to_date(classEnd, 'DD-MM-YYYY HH:MI PM');
 
@@ -56,12 +57,12 @@ BEGIN
         END;
     END LOOP;
     COMMIT;
-
     DBMS_OUTPUT.PUT_LINE('Staff Attendance added successfully.');
 
 
 END generateAttendance;
 /
+-- Implementation examples
 BEGIN
     generateAttendance(0, STAFF_NAMES('John Apple'), CHILD_NAMES('Joe Vanderburg', 'Holly Prior', 'Tom Greenhill'), '01-01-2024 1:02 PM', '01-01-2024 3:01 PM');
 END;
