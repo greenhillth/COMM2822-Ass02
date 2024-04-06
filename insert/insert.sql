@@ -103,6 +103,29 @@ BEGIN
     INSERT INTO Y24GROUP054.WAITLIST("DATE_ADDED") VALUES ('29-Feb-2024');
 END;
 /
+-- Populate Medication Table
+BEGIN
+    INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Enanazole');
+    INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Interfemara');
+    INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Fibrinone');
+    INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Amcinidine');
+    INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Asparacerol');
+    INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Trilinam');
+    INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Afixane Alkepentin');
+    INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Alpralestid Somaluble');
+    INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Quixitinoin Abaretane');
+    INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Ethacaine Tesbucil');
+    INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Adapazide');
+    INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Reflinatal');
+    INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Pentarotec');
+    INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Somalamide');
+    INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Olapiride');
+    INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Tetazoxane');
+    INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Naveltora Trazonitol');
+    INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Clarabine Methogestrel');
+    INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Prepogine Vigafinil');
+    INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Lioparin Bioroban');
+END;
 
 -- Populate Child Table
 -- declare sample table of emergency contacts
@@ -168,6 +191,92 @@ BEGIN
 END;
 /
 
+-- Populate Child_Medication table
+BEGIN
+    INSERT INTO Y24GROUP054.CHILD_MEDICATION("CHILD_ID", "MEDICATION_ID", "DOSAGE_MG", "FREQUENCY", "DESCRIPTION") VALUES (8, 12, 868.67, 'twice daily','allergies');
+    INSERT INTO Y24GROUP054.CHILD_MEDICATION("CHILD_ID", "MEDICATION_ID", "DOSAGE_MG", "FREQUENCY", "DESCRIPTION") VALUES (7, 14, 798.29, 'hourly','growth supplement');
+    INSERT INTO Y24GROUP054.CHILD_MEDICATION("CHILD_ID", "MEDICATION_ID", "DOSAGE_MG", "FREQUENCY", "DESCRIPTION") VALUES (3, 11, 943.5, 'every two hours','headaches');
+    INSERT INTO Y24GROUP054.CHILD_MEDICATION("CHILD_ID", "MEDICATION_ID", "DOSAGE_MG", "FREQUENCY", "DESCRIPTION") VALUES (9, 18, 452.62, 'daily','bellyaches');
+    INSERT INTO Y24GROUP054.CHILD_MEDICATION("CHILD_ID", "MEDICATION_ID", "DOSAGE_MG", "FREQUENCY", "DESCRIPTION") VALUES (7, 13, 215.88, 'every two hours','headaches');
+    INSERT INTO Y24GROUP054.CHILD_MEDICATION("CHILD_ID", "MEDICATION_ID", "DOSAGE_MG", "FREQUENCY", "DESCRIPTION") VALUES (7, 16, 935.61, 'hourly','growth supplement');
+    INSERT INTO Y24GROUP054.CHILD_MEDICATION("CHILD_ID", "MEDICATION_ID", "DOSAGE_MG", "FREQUENCY", "DESCRIPTION") VALUES (4, 11, 197.19, 'every thirty minutes','every thirty minutes');
+    INSERT INTO Y24GROUP054.CHILD_MEDICATION("CHILD_ID", "MEDICATION_ID", "DOSAGE_MG", "FREQUENCY", "DESCRIPTION") VALUES (9, 11, 48.05, 'twice daily','allergies');
+    INSERT INTO Y24GROUP054.CHILD_MEDICATION("CHILD_ID", "MEDICATION_ID", "DOSAGE_MG", "FREQUENCY", "DESCRIPTION") VALUES (1, 17, 524.67, 'every two hours','HGH');
+    INSERT INTO Y24GROUP054.CHILD_MEDICATION("CHILD_ID", "MEDICATION_ID", "DOSAGE_MG", "FREQUENCY", "DESCRIPTION") VALUES (6, 17, 663.89, 'twice daily','allergies');
+    INSERT INTO Y24GROUP054.CHILD_MEDICATION("CHILD_ID", "MEDICATION_ID", "DOSAGE_MG", "FREQUENCY", "DESCRIPTION") VALUES (12, 1, 326.08, 'twice daily','allergies');
+    INSERT INTO Y24GROUP054.CHILD_MEDICATION("CHILD_ID", "MEDICATION_ID", "DOSAGE_MG", "FREQUENCY", "DESCRIPTION") VALUES (12, 2, 224.97, 'hourly','growth supplement');
+    INSERT INTO Y24GROUP054.CHILD_MEDICATION("CHILD_ID", "MEDICATION_ID", "DOSAGE_MG", "FREQUENCY", "DESCRIPTION") VALUES (16, 3, 241.68, 'every two hours','headaches');
+    INSERT INTO Y24GROUP054.CHILD_MEDICATION("CHILD_ID", "MEDICATION_ID", "DOSAGE_MG", "FREQUENCY", "DESCRIPTION") VALUES (14, 7, 367.15, 'daily','bellyaches');
+    INSERT INTO Y24GROUP054.CHILD_MEDICATION("CHILD_ID", "MEDICATION_ID", "DOSAGE_MG", "FREQUENCY", "DESCRIPTION") VALUES (17, 4, 20.02, 'every two hours','headaches');
+    INSERT INTO Y24GROUP054.CHILD_MEDICATION("CHILD_ID", "MEDICATION_ID", "DOSAGE_MG", "FREQUENCY", "DESCRIPTION") VALUES (14, 1, 370.2, 'hourly','growth supplement');
+    INSERT INTO Y24GROUP054.CHILD_MEDICATION("CHILD_ID", "MEDICATION_ID", "DOSAGE_MG", "FREQUENCY", "DESCRIPTION") VALUES (17, 7, 196.37, 'every thirty minutes','every thirty minutes');
+    INSERT INTO Y24GROUP054.CHILD_MEDICATION("CHILD_ID", "MEDICATION_ID", "DOSAGE_MG", "FREQUENCY", "DESCRIPTION") VALUES (14, 9, 954.33, 'twice daily','allergies');
+    INSERT INTO Y24GROUP054.CHILD_MEDICATION("CHILD_ID", "MEDICATION_ID", "DOSAGE_MG", "FREQUENCY", "DESCRIPTION") VALUES (19, 7, 656.51, 'every two hours','headaches');
+    INSERT INTO Y24GROUP054.CHILD_MEDICATION("CHILD_ID", "MEDICATION_ID", "DOSAGE_MG", "FREQUENCY", "DESCRIPTION") VALUES (11, 7, 923.53, 'twice daily','allergies');
+END;
+/
+-- Populate Room table
+BEGIN
+    -- young kids
+    addRoom('Koala1', 'North Wing', 10, 0, 1);
+    addRoom('Koala2', 'North Wing', 10, 0, 1);
+    addRoom('Koala3', 'North Wing', 13, 0, 1);
+    addRoom('Koala4', 'North Wing', 13, 0, 1);
+    -- young toddlers
+    addRoom('TassieDevil1', 'South Wing', 10, 2, 3);
+    addRoom('TassieDevil2', 'South Wing', 10, 2, 3);
+    addRoom('TassieDevil3', 'South Wing', 13, 2, 3);
+    addRoom('TassieDevil4', 'South Wing', 13, 2, 3);
+    -- old toddlers
+    addRoom('Wallaby1', 'West Wing', 6, 3, 4);
+    addRoom('Wallaby2', 'West Wing', 8, 3, 4);
+    addRoom('Wallaby3', 'West Wing', 10, 3, 4);
+    addRoom('Wallaby4', 'West Wing', 4, 3, 4);
+    --oldest
+    addRoom('Kangaroo1', 'East Wing', 15, 5, 8);
+    addRoom('Kangaroo2', 'East Wing', 12, 5, 8);
+    addRoom('Kangaroo3', 'East Wing', 10, 5, 8);
+END;
+/
 
--- Populate 
+-- Populate Class table
+BEGIN
+    
+    addClass('Koala1', SESSIONS('M7A','M12P','Tu7A','Tu12P','W7A','W12P','Th7A','Th12P','F7A','F12P'));
+    addClass('Koala2', SESSIONS('M9A','M1P','Tu9A','Tu1P','W9A','W1P','Th9A','Th1P','F9A','F1P'));
+    addClass('Koala3', SESSIONS('M7A','M12P','Tu7A','Tu12P','W7A','W12P','Th7A','Th12P','F7A','F12P'));
+    addClass('Koala4', SESSIONS('M9A','M1P','Tu9A','Tu1P','W9A','W1P','Th9A','Th1P','F9A','F1P'));
 
+    addClass('TassieDevil1', SESSIONS('M7A','M12P','Tu7A','Tu12P','W7A','W12P','Th7A','Th12P','F7A','F12P'));
+    addClass('TassieDevil2', SESSIONS('M9A','M1P','Tu9A','Tu1P','W9A','W1P','Th9A','Th1P','F9A','F1P'));
+    addClass('TassieDevil3', SESSIONS('M7A','M12P','Tu7A','Tu12P','W7A','W12P','Th7A','Th12P','F7A','F12P'));
+    addClass('TassieDevil4', SESSIONS('M9A','M1P','Tu9A','Tu1P','W9A','W1P','Th9A','Th1P','F9A','F1P'));
+    
+    addClass('Wallaby1', SESSIONS('M7A','M12P','Tu7A','Tu12P','W7A','W12P','Th7A','Th12P','F7A','F12P'));
+    addClass('Wallaby2', SESSIONS('M9A','M1P','Tu9A','Tu1P','W9A','W1P','Th9A','Th1P','F9A','F1P'));
+    addClass('Wallaby3', SESSIONS('M7A','M12P','Tu7A','Tu12P','W7A','W12P','Th7A','Th12P','F7A','F12P'));
+    addClass('Wallaby4', SESSIONS('M9A','M1P','Tu9A','Tu1P','W9A','W1P','Th9A','Th1P','F9A','F1P'));
+    
+    addClass('Kangaroo1', SESSIONS('M7A','M12P','Tu7A','Tu12P','W7A','W12P','Th7A','Th12P','F7A','F12P'));
+    addClass('Kangaroo2', SESSIONS('M9A','M1P','Tu9A','Tu1P','W9A','W1P','Th9A','Th1P','F9A','F1P'));
+    addClass('Kangaroo3', SESSIONS('M9A','M1P','Tu9A','Tu1P','W9A','W1P','Th9A','Th1P','F9A','F1P'));
+    
+    END;
+/
+
+-- Generate attendances
+BEGIN
+    generateAttendance(9, STAFF_NAMES('Tom Greenhill'), CHILD_NAMES('Jackson Ferry', 'Dylan Mclaughlin', 'Jonathan Shields'), '28-12-2023 09:35 AM', '28-12-2023 11:35 AM');
+    generateAttendance(19, STAFF_NAMES('John Apple'), CHILD_NAMES('Jasper Wood', 'Nate Durgan', 'Chloe Kohler'), '08-02-2024 01:22 PM', '08-02-2024 05:22 PM');
+    generateAttendance(7, STAFF_NAMES('Whitney Koch'), CHILD_NAMES('Madison Heaney', 'Mackenzie Dietrich', 'Hugo Haley'), '05-03-2024 01:05 PM', '05-03-2024 05:05 PM');
+    generateAttendance(2, STAFF_NAMES('James Lowe'), CHILD_NAMES('Sarah Davies', 'Abby Abbott', 'Oscar Bartell'), '27-03-2024 02:09 PM', '27-03-2024 06:09 PM');
+    generateAttendance(21, STAFF_NAMES('Bobby Kessler'), CHILD_NAMES('Annabelle Walker', 'Jackson Ferry', 'Jasper Wood'), '06-09-2023 10:13 AM', '06-09-2023 4:13 PM');
+    generateAttendance(6, STAFF_NAMES('Julian Patel','Steve Schultz'), CHILD_NAMES('Ivy Martin', 'Madison Heaney', 'Sarah Davies'), '18-09-2023 12:47 PM', '18-09-2023 5:47 PM');
+    generateAttendance(16, STAFF_NAMES('Ronald Garden'), CHILD_NAMES('Alyssa Murray', 'Annabelle Walker', 'Ivy Martin'), '05-05-2023 10:07 AM', '05-05-2023 3:07 PM');
+    generateAttendance(12, STAFF_NAMES('Julius Fahey','Vicky Morrison', 'Lee Bogan'), CHILD_NAMES('Emily Feil', 'Alyssa Murray', 'Ivy Martin'), '25-06-2023 02:30 PM', '25-06-2023 05:30 PM');
+    generateAttendance(17, STAFF_NAMES('Sabrina Hall'), CHILD_NAMES('Caitlin Stark', 'Annabelle Walker', 'Stella Kovacek'), '04-06-2023 07:26 AM', '04-06-2023 11:26 AM');
+    generateAttendance(8, STAFF_NAMES('Lillian Richards','Lee Bogan'), CHILD_NAMES('Stella Kovacek', 'Michael Schultz', 'Molly Emmerich'), '13-05-2023 03:00 PM', '13-05-2023 06:00 PM');
+    generateAttendance(4, STAFF_NAMES('Ernest Monahan'), CHILD_NAMES('Michael Schultz', 'Anna Dickens', 'Andrew Roberts'), '22-05-2023 10:03 AM', '22-05-2023 2:03 PM');
+    generateAttendance(11, STAFF_NAMES('Lindsey Boyer'), CHILD_NAMES('Molly Emmerich', 'Madison Kovacek', 'Heidi Sanford'), '02-01-2024 01:49 PM', '02-01-2024 04:49 PM');
+END;
+/
