@@ -6,6 +6,7 @@ OR REPLACE PROCEDURE generateAttendance (
     classStart VARCHAR2,
     classEnd VARCHAR2
 ) AS
+    class_id INTEGER;
     startTime DATE;
     endTime DATE;
 BEGIN
