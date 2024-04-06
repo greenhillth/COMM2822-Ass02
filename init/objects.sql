@@ -6,6 +6,7 @@ OR REPLACE TYPE ADDR_OBJ AS OBJECT (
     state VARCHAR2(3),
     postcode NUMBER(4, 0)
 );
+/
 CREATE
 OR REPLACE TYPE CONTACT AS OBJECT (
     name_first VARCHAR2(25),
@@ -14,6 +15,14 @@ OR REPLACE TYPE CONTACT AS OBJECT (
     address ADDR_OBJ,
     email VARCHAR2(20)
 );
+/
+CREATE
+OR REPLACE TYPE STAFF_NAMES AS TABLE OF VARCHAR(50);
+/
+CREATE
+OR REPLACE TYPE CHILD_NAMES AS TABLE OF VARCHAR(50);
+/
+
 /*
 TODO - denormalise qualification entities as overlap unlikely 
 

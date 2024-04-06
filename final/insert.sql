@@ -1,5 +1,6 @@
 /*
 Final insert script. ORDER:
+(Important to )
 
 1. Employee
 2. Parent
@@ -20,5 +21,13 @@ Final insert script. ORDER:
 17. Parent type
 18. Payment
 
+
+add-employee: (name, hire date, address, email, contact no)
+
+add-qualification: (name, qualification)  
+
+add-parent: (name, address, email, contact no, parent type)
+
+add-child
 
 */
