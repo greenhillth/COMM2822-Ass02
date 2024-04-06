@@ -20,9 +20,9 @@ BEGIN
       prnt_type_id := 1;
     ELSIF prnt_type = 'UNSW PHD' THEN
       prnt_type_id := 2;
-    ELSIF prnt_type > 'UNSW STAFF' THEN
+    ELSIF prnt_type = 'UNSW STAFF' THEN
       prnt_type_id := 3;
-    ELSIF prnt_type > 'UNSW PREV' THEN
+    ELSIF prnt_type = 'UNSW PREV' THEN
       prnt_type_id := 4;
     ELSE
       prnt_type_id := NULL;
