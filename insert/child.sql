@@ -4,4 +4,4 @@ VALUES
 (0, null, 'Roy', 'Doyle', null, 0, '12-12-2020'),
 (0, null, 'Roy', 'Doyle', null, 0, '12-12-2020'),
 (0, null, 'Roy', 'Doyle', null, 0, '12-12-2020'),
-(0, null, 'Roy', 'Doyle', null, 0, '12-12-2020'),
+(0, null, 'Roy', 'Doyle', null, 0, '12-12-2020');

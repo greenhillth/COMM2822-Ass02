@@ -1,0 +1,13 @@
+CREATE OR REPLACE PROCEDURE InsertEmpQual(h_date IN DATE, name_first IN VARCHAR2, name_last IN VARCHAR2, c_num IN VARCHAR2) AS
+    insertion_err EXCEPTION;
+BEGIN
+    INSERT INTO
+        EMPLOYEE (HIRE_DATE, FIRST_NAME, LAST_NAME, ADDRESS, CONTACT_NUMBER)
+    VALUES
+        (emp_id, qual_id);
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Error: ' || SQLERRM);
+END InsertEmpQual;
+/

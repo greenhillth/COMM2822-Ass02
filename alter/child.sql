@@ -1,13 +1,17 @@
 ALTER TABLE "Y24GROUP054"."CHILD"
 ADD (
+    -- Primary Key
     CONSTRAINT CHILD_ID_PK PRIMARY KEY ("CHILD_ID") ENABLE,
+    -- Foreign Keys
     CONSTRAINT CHILD_PARENT_FK FOREIGN KEY ("PARENT_ID") references "PARENT" ("PARENT_ID"),
     CONSTRAINT CHILD_WLIST_FK FOREIGN KEY ("WAITLIST_ID") references "WAITLIST" ("WAITLIST_ID"),
+    -- Data validation
     CONSTRAINT CCS_PCT_BOUNDS CHECK (
         "CCS_PERCENTAGE" >= 0
         AND "CCS_PERCENTAGE" <= 1
     ) ENABLE
 );
+
 COMMENT ON COLUMN "Y24GROUP054"."CHILD"."CHILD_ID" IS 'Primary key of Child table. Uniquely identifies enrolled children.';
 COMMENT ON COLUMN "Y24GROUP054"."CHILD"."PARENT_ID" IS 'Foreign key to referenced Parent ID. Not nullable.';
 COMMENT ON COLUMN "Y24GROUP054"."CHILD"."WAITLIST_ID" IS 'Foreign key to referenced Waitlist ID. Nullable as child may not be on waitlist.';
