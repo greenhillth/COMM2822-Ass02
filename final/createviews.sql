@@ -38,5 +38,6 @@ SELECT table_name AS "Table",
                '/ROWSET/ROW/COUNT'
            )
        ) AS "Number of rows"
-FROM user_tables;
+FROM user_tables
+ORDER BY "Number of rows";
 /
