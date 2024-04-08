@@ -67,7 +67,7 @@ ADD (
     CONSTRAINT ATNDCE_EMP_FK FOREIGN KEY ("EMPLOYEE_ID") references "EMPLOYEE" ("EMPLOYEE_ID"),
     CONSTRAINT ATNDCE_CLASS_FK FOREIGN KEY ("CLASS_ID") references "CLASS" ("CLASS_ID"),
     -- data validation
-    CONSTRAINT DEP_AFT_ARR CHECK ("DEPARTURE" > "ARRIVAL") ENABLE
+    CONSTRAINT DEP_AFT_ARR CHECK ("DEPARTURE" > "ARRIVAL")
 );
 COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE_ATTENDANCE"."ROLL_ID" IS 'Primary key of Attendance table. Used to uniquely identify an instance of employees class attendance.';
 COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE_ATTENDANCE"."EMPLOYEE_ID" IS 'Foreign key to referenced Employee ID. Not nullable.';
@@ -91,8 +91,8 @@ ADD (
             "EMAIL",
             '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'
         )
-    ) ENABLE,
-    CONSTRAINT EMP_SALARY_MIN CHECK (salary > 0) ENABLE
+    ),
+    CONSTRAINT EMP_SALARY_MIN CHECK (salary > 0)
 );
 -- Comments 
 COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."EMPLOYEE_ID" IS 'Primary key of employees table.';
