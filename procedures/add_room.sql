@@ -32,24 +32,9 @@ END addRoom;
 -- Implementation Examples
 /*
 BEGIN
-    -- young kids
-    addRoom('Koala1', 'North Wing', 10, 0, 1);
-    addRoom('Koala2', 'North Wing', 10, 0, 1);
-    addRoom('Koala3', 'North Wing', 13, 0, 1);
-    addRoom('Koala4', 'North Wing', 13, 0, 1);
-    -- young toddlers
-    addRoom('TassieDevil1', 'South Wing', 10, 2, 3);
+    addRoom('Koala1', 'North Wing', 10, 0, 1
     addRoom('TassieDevil2', 'South Wing', 10, 2, 3);
-    addRoom('TassieDevil3', 'South Wing', 13, 2, 3);
-    addRoom('TassieDevil4', 'South Wing', 13, 2, 3);
-    -- old toddlers
-    addRoom('Wallaby1', 'West Wing', 6, 3, 4);
-    addRoom('Wallaby2', 'West Wing', 8, 3, 4);
     addRoom('Wallaby3', 'West Wing', 10, 3, 4);
-    addRoom('Wallaby4', 'West Wing', 4, 3, 4);
-    --oldest
-    addRoom('Kangaroo1', 'East Wing', 15, 5, 8);
-    addRoom('Kangaroo2', 'East Wing', 12, 5, 8);
     addRoom('Kangaroo3', 'East Wing', 10, 5, 8);
 END;
 /

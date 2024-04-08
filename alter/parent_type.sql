@@ -32,6 +32,8 @@ ADD (
         )
     )
 );
+/
+-- Comments
 COMMENT ON COLUMN "Y24GROUP054"."PARENT_TYPE"."RECORD_ID" IS 'Identifier record for given parent. Primary key.';
 COMMENT ON COLUMN "Y24GROUP054"."PARENT_TYPE"."TYPE_ID" IS 'Identifier of parent type. Holds a value of either 1 (Employee), 2 (PHD), 3 (UNSW Staff) or 4 (Ex-UNSW).';
 COMMENT ON COLUMN "Y24GROUP054"."PARENT_TYPE"."TYPE_NAME" IS 'Holds text representation of parent type. Type and number must match.';

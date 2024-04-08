@@ -1,5 +1,5 @@
+-- Modify Employee table
 ALTER TABLE "Y24GROUP054"."EMPLOYEE"
--- Constraints
 ADD (
     -- Data Validation
     CONSTRAINT VALIDATE_EMP_EMAIL CHECK (
@@ -10,6 +10,7 @@ ADD (
     ) ENABLE,
     CONSTRAINT EMP_SALARY_MIN CHECK (salary > 0) ENABLE
 );
+/
 -- Comments 
 COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."EMPLOYEE_ID" IS 'Primary key of employees table.';
 COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."FIRST_NAME" IS 'Employee first name. Non-null values only.';

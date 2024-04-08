@@ -1,3 +1,4 @@
+-- Modify Child table
 ALTER TABLE "Y24GROUP054"."CHILD"
 ADD (
     -- Foreign Keys
@@ -9,7 +10,8 @@ ADD (
         AND "CCS_PERCENTAGE" <= 1
     ) ENABLE
 );
-
+/
+-- Comments
 COMMENT ON COLUMN "Y24GROUP054"."CHILD"."CHILD_ID" IS 'Primary key of Child table. Uniquely identifies enrolled children.';
 COMMENT ON COLUMN "Y24GROUP054"."CHILD"."PARENT_ID" IS 'Foreign key to referenced Parent ID. Not nullable.';
 COMMENT ON COLUMN "Y24GROUP054"."CHILD"."WAITLIST_ID" IS 'Foreign key to referenced Waitlist ID. Nullable as child may not be on waitlist.';

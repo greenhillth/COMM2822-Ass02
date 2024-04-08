@@ -1,8 +1,11 @@
+-- Modify Child_medication table
 ALTER TABLE "Y24GROUP054"."CHILD_MEDICATION"
 ADD (
     CONSTRAINT CMED_MED_FK FOREIGN KEY ("MEDICATION_ID") references "MEDICATION" ("MEDICATION_ID"),
     CONSTRAINT CMED_CHILD_FK FOREIGN KEY ("CHILD_ID") references "CHILD" ("CHILD_ID")
 );
+/
+-- Comments
 COMMENT ON COLUMN "Y24GROUP054"."CHILD_MEDICATION"."RECORD_ID" IS 'Primary key of Medication table.';
 COMMENT ON COLUMN "Y24GROUP054"."CHILD_MEDICATION"."CHILD_ID" IS 'Foreign key to referenced Child ID. Not nullable.';
 COMMENT ON COLUMN "Y24GROUP054"."CHILD_MEDICATION"."MEDICATION_ID" IS 'Foreign key to referenced Medication ID. Not nullable.';

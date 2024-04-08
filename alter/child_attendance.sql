@@ -1,7 +1,10 @@
+-- Modify Child_attendance table
 ALTER TABLE "Y24GROUP054"."CHILD_ATTENDANCE"
 ADD (
     CONSTRAINT ATTN_TIME_INTERVAL CHECK ("DEPARTURE" > "ARRIVAL") ENABLE
 );
+/
+-- Comments
 COMMENT ON COLUMN "Y24GROUP054"."CHILD_ATTENDANCE"."ROLL_ID" IS 'Primary key of Attendance table. Used to uniquely identify an instance of class attendance.';
 COMMENT ON COLUMN "Y24GROUP054"."CHILD_ATTENDANCE"."CHILD_ID" IS 'Foreign key to referenced Child ID. Not nullable.';
 COMMENT ON COLUMN "Y24GROUP054"."CHILD_ATTENDANCE"."CLASS_ID" IS 'Foreign key to referenced Class ID. Not nullable.';

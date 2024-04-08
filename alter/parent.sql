@@ -1,3 +1,4 @@
+-- Modify Parent table
 ALTER TABLE "Y24GROUP054"."PARENT"
 ADD (
     -- Data validation
@@ -8,6 +9,7 @@ ADD (
         )
     ) ENABLE
 );
+/
 -- Comments 
 COMMENT ON COLUMN "Y24GROUP054"."PARENT"."PARENT_ID" IS 'Primary key of parent table.';
 COMMENT ON COLUMN "Y24GROUP054"."PARENT"."FIRST_NAME" IS 'Parent first name. Non-null values only.';

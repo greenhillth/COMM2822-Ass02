@@ -1,3 +1,4 @@
+-- Modify Employee_attendance table
 ALTER TABLE "Y24GROUP054"."EMPLOYEE_ATTENDANCE"
 ADD (
     -- foreign keys
@@ -6,6 +7,7 @@ ADD (
     -- data validation
     CONSTRAINT DEP_AFT_ARR CHECK ("DEPARTURE" > "ARRIVAL") ENABLE
 );
+/
 COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE_ATTENDANCE"."ROLL_ID" IS 'Primary key of Attendance table. Used to uniquely identify an instance of employees class attendance.';
 COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE_ATTENDANCE"."EMPLOYEE_ID" IS 'Foreign key to referenced Employee ID. Not nullable.';
 COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE_ATTENDANCE"."CLASS_ID" IS 'Foreign key to referenced Class ID. Not nullable.';
