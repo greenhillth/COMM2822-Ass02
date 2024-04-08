@@ -25,3 +25,18 @@ FROM
 ORDER BY
     PARENT_ID;
 /
+
+CREATE OR REPLACE VIEW database_details AS
+SELECT table_name AS "Table",
+       TO_NUMBER(
+           EXTRACTVALUE(
+               XMLTYPE(
+                   DBMS_XMLGEN.GETXML(
+                       'SELECT COUNT(*) AS count FROM ' || table_name
+                   )
+               ),
+               '/ROWSET/ROW/COUNT'
+           )
+       ) AS "Number of rows"
+FROM user_tables;
+/

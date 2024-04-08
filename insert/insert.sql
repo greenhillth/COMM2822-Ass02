@@ -126,7 +126,7 @@ BEGIN
     INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Prepogine Vigafinil');
     INSERT INTO Y24GROUP054.MEDICATION("MEDICATION_NAME") VALUES ('Lioparin Bioroban');
 END;
-
+/
 -- Populate Child Table
 -- declare sample table of emergency contacts
 CREATE OR REPLACE TYPE CONTACT_TABLE AS TABLE OF CONTACT;
