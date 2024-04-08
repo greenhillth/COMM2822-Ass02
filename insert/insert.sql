@@ -24,29 +24,29 @@ END;
 
 -- Populate employees table
 BEGIN
-    addEmployee('Tom Greenhill', '11-AUG-2020', ADDR_OBJ(21, 'Chalmers Lane', 'Devonport', 'TAS', 7310), 'Savannah20@gmail.com', '+61 488 151 232');
-    addEmployee('John Apple', '01-DEC-2023',  ADDR_OBJ(9, 'Meadow Street', 'St Helens', 'TAS', 7310), 'Madeline97@yahoo.com', '06 0039 5419');
-    addEmployee('Whitney Koch', '30-May-2023', ADDR_OBJ(282, 'Russel Station St', 'North Emma', 'NSW', 2085), 'Abigail10@gmail.com', '+61 465 075 681');
-    addEmployee('James Lowe', '07-Dec-2023', ADDR_OBJ(170, 'Phoenix Mall', 'Loveland', 'NSW', 2647), 'JaydenHettinger@hotmail.com', '05 7682 4803');
-    addEmployee('Bobby Kessler', '20-Dec-2023', ADDR_OBJ(448, 'Jackson Circuit', 'Coral Gables', 'NSW', 2089), 'Claudia79@hotmail.com', '01 0447 9267');
-    addEmployee('Julian Patel', '27-Jan-2024', ADDR_OBJ(615, 'Jonathan Parkway', 'Conroyberg', 'NSW', 2148), 'Angus_Beatty@gmail.com', '0460 768 687');
-    addEmployee('Ronald Garden', '25-Aug-2023', ADDR_OBJ(753, 'Chelsea Avenue', 'Port Callum', 'NSW', 2137), 'Chloe_B_84@hotmail.com', '0429 836 761');
-    addEmployee('Julius Fahey', '20-Dec-2023', ADDR_OBJ(695, 'Tahlia Road', 'Cartwrightburgh', 'NSW', 2577), 'Lara22@gmail.com', '+61 1 6446 7399');
-    addEmployee('Sabrina Hall', '12-Sep-2023', ADDR_OBJ(456, 'George Pass', 'Lake Summer', 'NSW', 2310), 'Sebastian.Garden@hotmail.com', '04 0585 7877');
-    addEmployee('Lillian Richards', '17-May-2023', ADDR_OBJ(101, 'Natalie View Rd', 'New Gabriel', 'NSW', 2941), 'Tahlia_A71@hotmail.com', '+61 3 6301 8876');
-    addEmployee('Ernest Monahan', '05-Jul-2023', ADDR_OBJ(882, 'Bartell Loop', 'Cameronview', 'NSW', 2415), 'Joel84@gmail.com', '0407 889 841');
-    addEmployee('Lindsey Boyer', '10-Mar-2024', ADDR_OBJ(89, 'Tremblay Drive', 'Claudiaview', 'NSW', 2268), 'Nate_Ernser46@hotmail.com', '+61 2 2254 3856');
-    addEmployee('Amanda Price', '27-Nov-2023', ADDR_OBJ(30, 'Nader Lane', 'East Jake', 'NSW', 2780), 'Willow.Jenkins@yahoo.com', '0402 867 367');
-    addEmployee('Judith Garden', '21-May-2023', ADDR_OBJ(93, 'Murray Plaza', 'Santa Fe', 'NSW', 2837), 'Ashton25@hotmail.com', '06 8139 6620');
-    addEmployee('Leonard Paterson', '16-Aug-2023', ADDR_OBJ(75, 'Schultz Run', 'North Georgia', 'NSW', 2588), 'Jasper.Towne@gmail.com', '09 2993 5809');
-    addEmployee('Dennis Schroeder', '14-Feb-2024', ADDR_OBJ(82, 'Moss Summit', 'Port Benjamin', 'NSW', 2427), 'Aidan_Wood69@yahoo.com', '04 3991 6000');
-    addEmployee('Damon Hartmann', '17-Jan-2024', ADDR_OBJ(81, 'Alice Pass', 'Homestead', 'NSW', 2943), 'Max71@yahoo.com', '0445 385 384');
-    addEmployee('Lynda Ross', '10-Jul-2023', ADDR_OBJ(88, 'Smith Street', 'Toledo', 'NSW', 2675), 'Hunter6@hotmail.com', '+61 479 568 325');
-    addEmployee('Bryan Stokes', '27-May-2023', ADDR_OBJ(68, 'Morrison Pass', 'Maddisonport', 'NSW', 2345), 'Gabriel_Monahan20@hotmail.com', '+61 487 828 639');
-    addEmployee('Randall Hand', '22-Nov-2023', ADDR_OBJ(11, 'Carroll Ridge', 'New Justinton', 'NSW', 2528), 'AddisonSchroed@gmail.com', '0414 984 623');
-    addEmployee('Steve Schultz', '10-Jan-2024', ADDR_OBJ(13, 'Nolan Estate Dr', 'Isabellatown', 'NSW', 2693), 'Abby.Mann@yahoo.com', '+61 3 6858 0437');
-    addEmployee('Vicky Morrison', '14-Dec-2023', ADDR_OBJ(45, 'Cartwright Run', 'Hesselshire', 'NSW', 2453), 'Claire.Bailey@gmail.com', '0433 238 630');
-    addEmployee('Lee Bogan', '24-Nov-2023', ADDR_OBJ(21, 'Lincoln Station St', 'Altamonte Springs', 'NSW', 2338), 'Elijah.West@gmail.com', '+61 7 9684 5626');
+    addEmployee('Tom Greenhill', '11-AUG-2020', ADDR_OBJ(21, 'Chalmers Lane', 'Devonport', 'TAS', 7310), 'Savannah20@gmail.com', '+61 488 151 232', 32533.9);
+    addEmployee('John Apple', '01-DEC-2023',  ADDR_OBJ(9, 'Meadow Street', 'St Helens', 'TAS', 7310), 'Madeline97@yahoo.com', '06 0039 5419', 87508.41);
+    addEmployee('Whitney Koch', '30-May-2023', ADDR_OBJ(282, 'Russel Station St', 'North Emma', 'NSW', 2085), 'Abigail10@gmail.com', '+61 465 075 681', 12858.14);
+    addEmployee('James Lowe', '07-Dec-2023', ADDR_OBJ(170, 'Phoenix Mall', 'Loveland', 'NSW', 2647), 'JaydenHettinger@hotmail.com', '05 7682 4803', 16254.38);
+    addEmployee('Bobby Kessler', '20-Dec-2023', ADDR_OBJ(448, 'Jackson Circuit', 'Coral Gables', 'NSW', 2089), 'Claudia79@hotmail.com', '01 0447 9267', 87574.6);
+    addEmployee('Julian Patel', '27-Jan-2024', ADDR_OBJ(615, 'Jonathan Parkway', 'Conroyberg', 'NSW', 2148), 'Angus_Beatty@gmail.com', '0460 768 687', 76603.54);
+    addEmployee('Ronald Garden', '25-Aug-2023', ADDR_OBJ(753, 'Chelsea Avenue', 'Port Callum', 'NSW', 2137), 'Chloe_B_84@hotmail.com', '0429 836 761', 50541.48);
+    addEmployee('Julius Fahey', '20-Dec-2023', ADDR_OBJ(695, 'Tahlia Road', 'Cartwrightburgh', 'NSW', 2577), 'Lara22@gmail.com', '+61 1 6446 7399', 49851.49);
+    addEmployee('Sabrina Hall', '12-Sep-2023', ADDR_OBJ(456, 'George Pass', 'Lake Summer', 'NSW', 2310), 'Sebastian.Garden@hotmail.com', '04 0585 7877', 44498.89);
+    addEmployee('Lillian Richards', '17-May-2023', ADDR_OBJ(101, 'Natalie View Rd', 'New Gabriel', 'NSW', 2941), 'Tahlia_A71@hotmail.com', '+61 3 6301 8876', 40502.28);
+    addEmployee('Ernest Monahan', '05-Jul-2023', ADDR_OBJ(882, 'Bartell Loop', 'Cameronview', 'NSW', 2415), 'Joel84@gmail.com', '0407 889 841', 75307.02);
+    addEmployee('Lindsey Boyer', '10-Mar-2024', ADDR_OBJ(89, 'Tremblay Drive', 'Claudiaview', 'NSW', 2268), 'Nate_Ernser46@hotmail.com', '+61 2 2254 3856', 59680.53);
+    addEmployee('Amanda Price', '27-Nov-2023', ADDR_OBJ(30, 'Nader Lane', 'East Jake', 'NSW', 2780), 'Willow.Jenkins@yahoo.com', '0402 867 367', 68064.29);
+    addEmployee('Judith Garden', '21-May-2023', ADDR_OBJ(93, 'Murray Plaza', 'Santa Fe', 'NSW', 2837), 'Ashton25@hotmail.com', '06 8139 6620', 57354.8);
+    addEmployee('Leonard Paterson', '16-Aug-2023', ADDR_OBJ(75, 'Schultz Run', 'North Georgia', 'NSW', 2588), 'Jasper.Towne@gmail.com', '09 2993 5809', 97314.39);
+    addEmployee('Dennis Schroeder', '14-Feb-2024', ADDR_OBJ(82, 'Moss Summit', 'Port Benjamin', 'NSW', 2427), 'Aidan_Wood69@yahoo.com', '04 3991 6000', 74409.98);
+    addEmployee('Damon Hartmann', '17-Jan-2024', ADDR_OBJ(81, 'Alice Pass', 'Homestead', 'NSW', 2943), 'Max71@yahoo.com', '0445 385 384', 10939.55);
+    addEmployee('Lynda Ross', '10-Jul-2023', ADDR_OBJ(88, 'Smith Street', 'Toledo', 'NSW', 2675), 'Hunter6@hotmail.com', '+61 479 568 325', 3599.71);
+    addEmployee('Bryan Stokes', '27-May-2023', ADDR_OBJ(68, 'Morrison Pass', 'Maddisonport', 'NSW', 2345), 'Gabriel_Monahan20@hotmail.com', '+61 487 828 639', 27211.72);
+    addEmployee('Randall Hand', '22-Nov-2023', ADDR_OBJ(11, 'Carroll Ridge', 'New Justinton', 'NSW', 2528), 'AddisonSchroed@gmail.com', '0414 984 623', 74066.78);
+    addEmployee('Steve Schultz', '10-Jan-2024', ADDR_OBJ(13, 'Nolan Estate Dr', 'Isabellatown', 'NSW', 2693), 'Abby.Mann@yahoo.com', '+61 3 6858 0437', 60463.63);
+    addEmployee('Vicky Morrison', '14-Dec-2023', ADDR_OBJ(45, 'Cartwright Run', 'Hesselshire', 'NSW', 2453), 'Claire.Bailey@gmail.com', '0433 238 630', 31045.33);
+    addEmployee('Lee Bogan', '24-Nov-2023', ADDR_OBJ(21, 'Lincoln Station St', 'Altamonte Springs', 'NSW', 2338), 'Elijah.West@gmail.com', '+61 7 9684 5626', 54292.92);
 END;
 /
 
