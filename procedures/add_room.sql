@@ -29,7 +29,8 @@ BEGIN
 END addRoom;
 /
 
--- Implementation examples
+-- Implementation Examples
+/*
 BEGIN
     -- young kids
     addRoom('Koala1', 'North Wing', 10, 0, 1);
@@ -52,3 +53,4 @@ BEGIN
     addRoom('Kangaroo3', 'East Wing', 10, 5, 8);
 END;
 /
+*/

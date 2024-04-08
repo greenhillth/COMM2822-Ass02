@@ -1,7 +1,6 @@
 ALTER TABLE "Y24GROUP054"."INVENTORY"
 ADD (
-    -- Primary Key
-    CONSTRAINT INVTRY_ID_PK PRIMARY KEY ("INVENTORY_ID") ENABLE
+    --null
 );
 -- Comments 
 COMMENT ON COLUMN "Y24GROUP054"."INVENTORY"."INVENTORY_ID" IS 'Primary key of inventory table. Represents an individual item.';

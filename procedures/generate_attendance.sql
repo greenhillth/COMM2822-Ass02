@@ -63,8 +63,10 @@ BEGIN
 
 END generateAttendance;
 /
--- Implementation examples
+-- Implementation Examples
+/*
 BEGIN
     generateAttendance(0, STAFF_NAMES('John Apple'), CHILD_NAMES('Joe Vanderburg', 'Holly Prior', 'Tom Greenhill'), '01-01-2024 1:02 PM', '01-01-2024 3:01 PM');
 END;
 /
+*/

@@ -50,8 +50,10 @@ BEGIN
 END addParent;
 /
 
--- Implementation examples
+-- Implementation Examples
+/*
 BEGIN
     addParent('Joe Mama', ADDR_OBJ(18, 'Nobbs Lane', 'Surry Hills', 'NSW', 2310), 'Lincoln46@hotmail.com', '0400 325 397', 'none');
 END;
 /
+*/

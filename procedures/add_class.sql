@@ -23,7 +23,10 @@ BEGIN
 
 END;
 /
+-- Implementation Examples
+/*
 BEGIN
     addClass('TassieDevil1', SESSIONS('M7A', 'M9A', 'M12P', 'T7A', 'T9A', 'T12P', 'T3P', 'W9A', 'W12P', 'W3P'));
 END;
 /
+*/

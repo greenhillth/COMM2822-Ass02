@@ -37,6 +37,7 @@ END addChild;
 /
 
 -- Implementation examples
+/*
 BEGIN
     addChild('Melody Pond', 'Mackenzie Wilson', '09-DEC-2022',
         CONTACT('Steve', 'Jobs',  '0400 325 397',
@@ -44,3 +45,4 @@ BEGIN
         'Lincoln46@hotmail.com'), NULL, 0);
 END;
 /
+*/

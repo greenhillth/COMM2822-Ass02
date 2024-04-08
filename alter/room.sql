@@ -1,5 +1,4 @@
 ALTER TABLE "Y24GROUP054"."ROOM"
 ADD (
-    -- Primary Key
-    CONSTRAINT ROOM_ID_PK PRIMARY KEY ("ROOM_ID") ENABLE
+    --null
 );

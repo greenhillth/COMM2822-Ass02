@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE InsertEmpQual(emp_id IN INTEGER, qual_id IN INTEGER) AS
+CREATE OR REPLACE PROCEDURE addEmployeeQualification(emp_id IN INTEGER, qual_id IN INTEGER) AS
     insertion_err EXCEPTION;
 BEGIN
     INSERT INTO

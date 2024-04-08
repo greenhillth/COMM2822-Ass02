@@ -36,9 +36,11 @@ BEGIN
 END addEmployee;
 /
 
--- Implementation examples
+-- Implementation Examples
+/*
 BEGIN
     addEmployee('James Stevens', '11-AUG-2020', ADDR_OBJ(21, 'Chalmers Lane', 'Devonport', 'TAS', 7310), 'Savannah20@gmail.com', '+61 488 151 232');
     addEmployee('John Apple', '01-DEC-2023', ADDR_OBJ(9, 'Meadow Street', 'Devonport', 'TAS', 7310), 'Madeline97@yahoo.com', '06 0039 5419');
 END;
 /
+*/
