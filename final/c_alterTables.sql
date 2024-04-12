@@ -143,53 +143,64 @@ ADD (
     --null
 );
 /
-ALTER TABLE "Y24GROUP054"."PARENT_TYPE"
+ALTER TABLE "Y24GROUP054"."P_TYPE_EMPLOYEE"
 ADD (
     -- Foreign Keys
-    CONSTRAINT PTYPE_PRNT_FK FOREIGN KEY ("PARENT_ID") references "PARENT" ("PARENT_ID"),
-    CONSTRAINT PTYPE_EMP_FK FOREIGN KEY ("EMPLOYEE_ID") references "EMPLOYEE" ("EMPLOYEE_ID"),
-    --Data Validation
-    CONSTRAINT VALID_TYPES CHECK (
-        ("TYPE_ID", "TYPE_NAME") IN (
-            SELECT
-                1 AS "TYPE_ID",
-                'EMPLOYEE' AS "TYPE_NAME"
-            FROM
-                DUAL
-            UNION ALL
-            SELECT
-                2 AS "TYPE_ID",
-                'UNSW_PHD' AS "TYPE_NAME"
-            FROM
-                DUAL
-            UNION ALL
-            SELECT
-                3 AS "TYPE_ID",
-                'UNSW_STAFF' AS "TYPE_NAME"
-            FROM
-                DUAL
-            UNION ALL
-            SELECT
-                4 AS "TYPE_ID",
-                'UNSW_PREVIOUS' AS "TYPE_NAME"
-            FROM
-                DUAL
-        )
-    )
+    CONSTRAINT PTYPE_EMP_PRNT_FK FOREIGN KEY ("PARENT_ID") references "PARENT" ("PARENT_ID"),
+    CONSTRAINT PTYPE_EMP_PRT_FK FOREIGN KEY ("EMPLOYEE_ID") references "EMPLOYEE" ("EMPLOYEE_ID")
+);
+
+ALTER TABLE "Y24GROUP054"."P_TYPE_UNSW_PHD"
+ADD (
+    -- Foreign Keys
+    CONSTRAINT PTYPE_PHD_PRNT_FK FOREIGN KEY ("PARENT_ID") references "PARENT" ("PARENT_ID"),
+    CONSTRAINT CHECK_ZID_VALID_PHD CHECK (REGEXP_LIKE(id, '^z\d{7}$'))
+);
+
+ALTER TABLE "Y24GROUP054"."P_TYPE_UNSW_STAFF"
+ADD (
+    -- Foreign Keys
+    CONSTRAINT PTYPE_STAFF_PRNT_FK FOREIGN KEY ("PARENT_ID") references "PARENT" ("PARENT_ID"),
+    CONSTRAINT CHECK_ZID_VALID_STAFF CHECK (REGEXP_LIKE(id, '^z\d{7}$'))
+);
+
+ALTER TABLE "Y24GROUP054"."P_TYPE_UNSW_PREV"
+ADD (
+    -- Foreign Keys
+    CONSTRAINT PTYPE_PREV_PRNT_FK FOREIGN KEY ("PARENT_ID") references "PARENT" ("PARENT_ID")
 );
 /
+
 -- Comments
-COMMENT ON COLUMN "Y24GROUP054"."PARENT_TYPE"."RECORD_ID" IS 'Identifier record for given parent. Primary key.';
-COMMENT ON COLUMN "Y24GROUP054"."PARENT_TYPE"."TYPE_ID" IS 'Identifier of parent type. Holds a value of either 1 (Employee), 2 (PHD), 3 (UNSW Staff) or 4 (Ex-UNSW).';
-COMMENT ON COLUMN "Y24GROUP054"."PARENT_TYPE"."TYPE_NAME" IS 'Holds text representation of parent type. Type and number must match.';
-COMMENT ON COLUMN "Y24GROUP054"."PARENT_TYPE"."PARENT_ID" IS 'ID of affiliated parent';
-COMMENT ON COLUMN "Y24GROUP054"."PARENT_TYPE"."EMPLOYEE_ID" IS 'Employee ID of parent, in the case parent is of type 1 (employee).';
-COMMENT ON COLUMN "Y24GROUP054"."PARENT_TYPE"."ZID" IS 'zID of parent. Nullable in the case parent is not affiliated with UNSW.';
-COMMENT ON COLUMN "Y24GROUP054"."PARENT_TYPE"."LEAVE_DATE" IS 'Leave date of parent. Nullable in the case parent is not Ex-UNSW.';
-COMMENT ON TABLE "Y24GROUP054"."PARENT_TYPE" IS 'Contains records of parent_type and affiliated data.';
+COMMENT ON COLUMN "Y24GROUP054"."PARENT_TYPE"."TYPE_ID" IS 'Identifier of parent type. Holds a value of either 1 (Employee), 2 (PHD), 3 (UNSW Staff) or 4 (Ex-UNSW). Primary Key.';
+COMMENT ON COLUMN "Y24GROUP054"."PARENT_TYPE"."TYPE_NAME" IS 'Holds text representation of parent type.';
+COMMENT ON COLUMN "Y24GROUP054"."PARENT_TYPE"."BASE_DAILY_RATE" IS 'Daily rate of specified type. Number between 0-9999.';
+COMMENT ON COLUMN "Y24GROUP054"."PARENT_TYPE"."WAITLIST_PRIORITY_LEVEL" IS 'Priority level each type granted when joining waitlist. Number between 1 (highest) to 5 (lowest).';
+
+COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_EMPLOYEE"."RECORD_ID" IS 'Identifier record for given parent. Primary key and unique across all parent types.';
+COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_EMPLOYEE"."TYPE_ID" IS 'Identifier of parent type. Holds a value of either 1 (Employee), 2 (PHD), 3 (UNSW Staff) or 4 (Ex-UNSW). Links to PARENT_TYPE table.';
+COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_EMPLOYEE"."PARENT_ID" IS 'ID of affiliated parent. Foreign key.';
+COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_EMPLOYEE"."EMPLOYEE_ID" IS 'Employee ID of affiliated parent. Foreign key.';
+
+COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_PHD"."RECORD_ID" IS 'Identifier record for given parent. Primary key and unique across all parent types.';
+COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_PHD"."TYPE_ID" IS 'Identifier of parent type. Holds a value of either 1 (Employee), 2 (PHD), 3 (UNSW Staff) or 4 (Ex-UNSW). Links to PARENT_TYPE table.';
+COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_PHD"."PARENT_ID" IS 'ID of affiliated parent. Foreign key.';
+COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_PHD"."Z_ID" IS 'zID of affiliated parent. Must be in valid zID format.';
+
+COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_STAFF"."RECORD_ID" IS 'Identifier record for given parent. Primary key and unique across all parent types.';
+COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_STAFF"."TYPE_ID" IS 'Identifier of parent type. Holds a value of either 1 (Employee), 2 (PHD), 3 (UNSW Staff) or 4 (Ex-UNSW). Links to PARENT_TYPE table.';
+COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_STAFF"."PARENT_ID" IS 'ID of affiliated parent. Foreign key.';
+COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_STAFF"."Z_ID" IS 'zID of affiliated parent. Must be in valid zID format.';
+
+COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_PREV"."RECORD_ID" IS 'Identifier record for given parent. Primary key and unique across all parent types.';
+COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_PREV"."TYPE_ID" IS 'Identifier of parent type. Holds a value of either 1 (Employee), 2 (PHD), 3 (UNSW Staff) or 4 (Ex-UNSW). Links to PARENT_TYPE table.';
+COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_PREV"."PARENT_ID" IS 'ID of affiliated parent. Foreign key.';
+COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_PREV"."Z_ID" IS 'zID of affiliated parent. Optional.';
+COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_PREV"."LEAVE_DATE" IS 'UNSW leave date of affiliated parent. Not null.';
 -- Modify Parent table
 ALTER TABLE "Y24GROUP054"."PARENT"
 ADD (
+    CONSTRAINT PRNT_PTYPE_FK FOREIGN KEY ("TYPE") references "PARENT_TYPE" ("TYPE_ID"),
     -- Data validation
     CONSTRAINT VALIDATE_PRNT_EMAIL CHECK (
         REGEXP_LIKE (
@@ -203,7 +214,7 @@ ADD (
 COMMENT ON COLUMN "Y24GROUP054"."PARENT"."PARENT_ID" IS 'Primary key of parent table.';
 COMMENT ON COLUMN "Y24GROUP054"."PARENT"."FIRST_NAME" IS 'Parent first name. Non-null values only.';
 COMMENT ON COLUMN "Y24GROUP054"."PARENT"."LAST_NAME" IS 'Parent last name. Non-null values only.';
-COMMENT ON COLUMN "Y24GROUP054"."PARENT"."TYPE" IS 'Type of parent. Nullable in the case parent member of public.';
+COMMENT ON COLUMN "Y24GROUP054"."PARENT"."TYPE" IS 'Type of parent. References PARENT_TYPE table.';
 COMMENT ON COLUMN "Y24GROUP054"."PARENT"."EMAIL" IS 'Parent email address';
 COMMENT ON COLUMN "Y24GROUP054"."PARENT"."CONTACT_NUMBER" IS 'Parent phone number, contains area extenstions';
 COMMENT ON COLUMN "Y24GROUP054"."PARENT"."ADDRESS" IS 'Parent address. Stored as an ADDR_OBJ object.';
@@ -326,7 +337,8 @@ OR REPLACE PROCEDURE addEmployee (
     date_hire DATE, 
     emp_addr ADDR_OBJ,
     emp_email VARCHAR2, 
-    ph_num VARCHAR2
+    ph_num VARCHAR2,
+    emp_salary NUMBER
 ) AS
     name_first VARCHAR2(25);
     name_last VARCHAR2(25);
@@ -341,15 +353,24 @@ BEGIN
     FROM "EMPLOYEE"
     WHERE "FIRST_NAME" = name_first AND
      "LAST_NAME" = name_last;
-    DBMS_OUTPUT.PUT_LINE('Employee already exists in database');
+    DBMS_OUTPUT.PUT_LINE('Employee already exists in database, overwriting');
     
+    UPDATE EMPLOYEE
+    SET
+        FIRST_NAME = name_first, LAST_NAME = name_last,
+        HIRE_DATE = date_hire, ADDRESS = emp_addr,
+        EMAIL = emp_email, CONTACT_NUMBER = ph_num,
+        SALARY = emp_salary
+        WHERE EMPLOYEE_ID = emp_id;
+    COMMIT;
+
     -- Insert into database otherwise (ID generated by default value seq)
     EXCEPTION
     WHEN NO_DATA_FOUND THEN
         INSERT INTO
-        "EMPLOYEE"(FIRST_NAME, LAST_NAME, HIRE_DATE, ADDRESS, EMAIL, CONTACT_NUMBER)
+        "EMPLOYEE"(FIRST_NAME, LAST_NAME, HIRE_DATE, ADDRESS, EMAIL, CONTACT_NUMBER, SALARY)
         VALUES
-            (name_first, name_last, date_hire, emp_addr, emp_email, ph_num);
+            (name_first, name_last, date_hire, emp_addr, emp_email, ph_num, emp_salary);
         COMMIT;
 
     -- Handle other exceptions

@@ -25,58 +25,59 @@ END;
 
 -- Populate employees table
 BEGIN
-    addEmployee('Tom Greenhill', '11-AUG-2020', ADDR_OBJ(21, 'Chalmers Lane', 'Devonport', 'TAS', 7310), 'Savannah20@gmail.com', '+61 488 151 232');
-    addEmployee('John Apple', '01-DEC-2023',  ADDR_OBJ(9, 'Meadow Street', 'St Helens', 'TAS', 7310), 'Madeline97@yahoo.com', '06 0039 5419');
-    addEmployee('Whitney Koch', '30-May-2023', ADDR_OBJ(282, 'Russel Station St', 'North Emma', 'NSW', 2085), 'Abigail10@gmail.com', '+61 465 075 681');
-    addEmployee('James Lowe', '07-Dec-2023', ADDR_OBJ(170, 'Phoenix Mall', 'Loveland', 'NSW', 2647), 'JaydenHettinger@hotmail.com', '05 7682 4803');
-    addEmployee('Bobby Kessler', '20-Dec-2023', ADDR_OBJ(448, 'Jackson Circuit', 'Coral Gables', 'NSW', 2089), 'Claudia79@hotmail.com', '01 0447 9267');
-    addEmployee('Julian Patel', '27-Jan-2024', ADDR_OBJ(615, 'Jonathan Parkway', 'Conroyberg', 'NSW', 2148), 'Angus_Beatty@gmail.com', '0460 768 687');
-    addEmployee('Ronald Garden', '25-Aug-2023', ADDR_OBJ(753, 'Chelsea Avenue', 'Port Callum', 'NSW', 2137), 'Chloe_B_84@hotmail.com', '0429 836 761');
-    addEmployee('Julius Fahey', '20-Dec-2023', ADDR_OBJ(695, 'Tahlia Road', 'Cartwrightburgh', 'NSW', 2577), 'Lara22@gmail.com', '+61 1 6446 7399');
-    addEmployee('Sabrina Hall', '12-Sep-2023', ADDR_OBJ(456, 'George Pass', 'Lake Summer', 'NSW', 2310), 'Sebastian.Garden@hotmail.com', '04 0585 7877');
-    addEmployee('Lillian Richards', '17-May-2023', ADDR_OBJ(101, 'Natalie View Rd', 'New Gabriel', 'NSW', 2941), 'Tahlia_A71@hotmail.com', '+61 3 6301 8876');
-    addEmployee('Ernest Monahan', '05-Jul-2023', ADDR_OBJ(882, 'Bartell Loop', 'Cameronview', 'NSW', 2415), 'Joel84@gmail.com', '0407 889 841');
-    addEmployee('Lindsey Boyer', '10-Mar-2024', ADDR_OBJ(89, 'Tremblay Drive', 'Claudiaview', 'NSW', 2268), 'Nate_Ernser46@hotmail.com', '+61 2 2254 3856');
-    addEmployee('Amanda Price', '27-Nov-2023', ADDR_OBJ(30, 'Nader Lane', 'East Jake', 'NSW', 2780), 'Willow.Jenkins@yahoo.com', '0402 867 367');
-    addEmployee('Judith Garden', '21-May-2023', ADDR_OBJ(93, 'Murray Plaza', 'Santa Fe', 'NSW', 2837), 'Ashton25@hotmail.com', '06 8139 6620');
-    addEmployee('Leonard Paterson', '16-Aug-2023', ADDR_OBJ(75, 'Schultz Run', 'North Georgia', 'NSW', 2588), 'Jasper.Towne@gmail.com', '09 2993 5809');
-    addEmployee('Dennis Schroeder', '14-Feb-2024', ADDR_OBJ(82, 'Moss Summit', 'Port Benjamin', 'NSW', 2427), 'Aidan_Wood69@yahoo.com', '04 3991 6000');
-    addEmployee('Damon Hartmann', '17-Jan-2024', ADDR_OBJ(81, 'Alice Pass', 'Homestead', 'NSW', 2943), 'Max71@yahoo.com', '0445 385 384');
-    addEmployee('Lynda Ross', '10-Jul-2023', ADDR_OBJ(88, 'Smith Street', 'Toledo', 'NSW', 2675), 'Hunter6@hotmail.com', '+61 479 568 325');
-    addEmployee('Bryan Stokes', '27-May-2023', ADDR_OBJ(68, 'Morrison Pass', 'Maddisonport', 'NSW', 2345), 'Gabriel_Monahan20@hotmail.com', '+61 487 828 639');
-    addEmployee('Randall Hand', '22-Nov-2023', ADDR_OBJ(11, 'Carroll Ridge', 'New Justinton', 'NSW', 2528), 'AddisonSchroed@gmail.com', '0414 984 623');
-    addEmployee('Steve Schultz', '10-Jan-2024', ADDR_OBJ(13, 'Nolan Estate Dr', 'Isabellatown', 'NSW', 2693), 'Abby.Mann@yahoo.com', '+61 3 6858 0437');
-    addEmployee('Vicky Morrison', '14-Dec-2023', ADDR_OBJ(45, 'Cartwright Run', 'Hesselshire', 'NSW', 2453), 'Claire.Bailey@gmail.com', '0433 238 630');
-    addEmployee('Lee Bogan', '24-Nov-2023', ADDR_OBJ(21, 'Lincoln Station St', 'Altamonte Springs', 'NSW', 2338), 'Elijah.West@gmail.com', '+61 7 9684 5626');
+    addEmployee('Tom Greenhill', '11-AUG-2020', ADDR_OBJ(21, 'Chalmers Lane', 'Devonport', 'TAS', 7310), 'Savannah20@gmail.com', '+61 488 151 232', 32533.9);
+    addEmployee('John Apple', '01-DEC-2023',  ADDR_OBJ(9, 'Meadow Street', 'St Helens', 'TAS', 7310), 'Madeline97@yahoo.com', '06 0039 5419', 87508.41);
+    addEmployee('Whitney Koch', '30-May-2023', ADDR_OBJ(282, 'Russel Station St', 'North Emma', 'NSW', 2085), 'Abigail10@gmail.com', '+61 465 075 681', 12858.14);
+    addEmployee('James Lowe', '07-Dec-2023', ADDR_OBJ(170, 'Phoenix Mall', 'Loveland', 'NSW', 2647), 'JaydenHettinger@hotmail.com', '05 7682 4803', 16254.38);
+    addEmployee('Bobby Kessler', '20-Dec-2023', ADDR_OBJ(448, 'Jackson Circuit', 'Coral Gables', 'NSW', 2089), 'Claudia79@hotmail.com', '01 0447 9267', 87574.6);
+    addEmployee('Julian Patel', '27-Jan-2024', ADDR_OBJ(615, 'Jonathan Parkway', 'Conroyberg', 'NSW', 2148), 'Angus_Beatty@gmail.com', '0460 768 687', 76603.54);
+    addEmployee('Ronald Garden', '25-Aug-2023', ADDR_OBJ(753, 'Chelsea Avenue', 'Port Callum', 'NSW', 2137), 'Chloe_B_84@hotmail.com', '0429 836 761', 50541.48);
+    addEmployee('Julius Fahey', '20-Dec-2023', ADDR_OBJ(695, 'Tahlia Road', 'Cartwrightburgh', 'NSW', 2577), 'Lara22@gmail.com', '+61 1 6446 7399', 49851.49);
+    addEmployee('Sabrina Hall', '12-Sep-2023', ADDR_OBJ(456, 'George Pass', 'Lake Summer', 'NSW', 2310), 'Sebastian.Garden@hotmail.com', '04 0585 7877', 44498.89);
+    addEmployee('Lillian Richards', '17-May-2023', ADDR_OBJ(101, 'Natalie View Rd', 'New Gabriel', 'NSW', 2941), 'Tahlia_A71@hotmail.com', '+61 3 6301 8876', 40502.28);
+    addEmployee('Ernest Monahan', '05-Jul-2023', ADDR_OBJ(882, 'Bartell Loop', 'Cameronview', 'NSW', 2415), 'Joel84@gmail.com', '0407 889 841', 75307.02);
+    addEmployee('Lindsey Boyer', '10-Mar-2024', ADDR_OBJ(89, 'Tremblay Drive', 'Claudiaview', 'NSW', 2268), 'Nate_Ernser46@hotmail.com', '+61 2 2254 3856', 59680.53);
+    addEmployee('Amanda Price', '27-Nov-2023', ADDR_OBJ(30, 'Nader Lane', 'East Jake', 'NSW', 2780), 'Willow.Jenkins@yahoo.com', '0402 867 367', 68064.29);
+    addEmployee('Judith Garden', '21-May-2023', ADDR_OBJ(93, 'Murray Plaza', 'Santa Fe', 'NSW', 2837), 'Ashton25@hotmail.com', '06 8139 6620', 57354.8);
+    addEmployee('Leonard Paterson', '16-Aug-2023', ADDR_OBJ(75, 'Schultz Run', 'North Georgia', 'NSW', 2588), 'Jasper.Towne@gmail.com', '09 2993 5809', 97314.39);
+    addEmployee('Dennis Schroeder', '14-Feb-2024', ADDR_OBJ(82, 'Moss Summit', 'Port Benjamin', 'NSW', 2427), 'Aidan_Wood69@yahoo.com', '04 3991 6000', 74409.98);
+    addEmployee('Damon Hartmann', '17-Jan-2024', ADDR_OBJ(81, 'Alice Pass', 'Homestead', 'NSW', 2943), 'Max71@yahoo.com', '0445 385 384', 10939.55);
+    addEmployee('Lynda Ross', '10-Jul-2023', ADDR_OBJ(88, 'Smith Street', 'Toledo', 'NSW', 2675), 'Hunter6@hotmail.com', '+61 479 568 325', 3599.71);
+    addEmployee('Bryan Stokes', '27-May-2023', ADDR_OBJ(68, 'Morrison Pass', 'Maddisonport', 'NSW', 2345), 'Gabriel_Monahan20@hotmail.com', '+61 487 828 639', 27211.72);
+    addEmployee('Randall Hand', '22-Nov-2023', ADDR_OBJ(11, 'Carroll Ridge', 'New Justinton', 'NSW', 2528), 'AddisonSchroed@gmail.com', '0414 984 623', 74066.78);
+    addEmployee('Steve Schultz', '10-Jan-2024', ADDR_OBJ(13, 'Nolan Estate Dr', 'Isabellatown', 'NSW', 2693), 'Abby.Mann@yahoo.com', '+61 3 6858 0437', 60463.63);
+    addEmployee('Vicky Morrison', '14-Dec-2023', ADDR_OBJ(45, 'Cartwright Run', 'Hesselshire', 'NSW', 2453), 'Claire.Bailey@gmail.com', '0433 238 630', 31045.33);
+    addEmployee('Lee Bogan', '24-Nov-2023', ADDR_OBJ(21, 'Lincoln Station St', 'Altamonte Springs', 'NSW', 2338), 'Elijah.West@gmail.com', '+61 7 9684 5626', 54292.92);
+END;
+/
+
+-- Define parent types
+BEGIN
+    INSERT INTO Y24GROUP054.PARENT_TYPE("TYPE_ID", "TYPE_NAME", "BASE_DAILY_RATE", "WAITLIST_PRIORITY_LEVEL") VALUES (1, 'Employee', 100, 1);
+    INSERT INTO Y24GROUP054.PARENT_TYPE("TYPE_ID", "TYPE_NAME", "BASE_DAILY_RATE", "WAITLIST_PRIORITY_LEVEL") VALUES (2, 'PHD Student', 150, 3);
+    INSERT INTO Y24GROUP054.PARENT_TYPE("TYPE_ID", "TYPE_NAME", "BASE_DAILY_RATE", "WAITLIST_PRIORITY_LEVEL") VALUES (3, 'UNSW Staff', 120, 2);
+    INSERT INTO Y24GROUP054.PARENT_TYPE("TYPE_ID", "TYPE_NAME", "BASE_DAILY_RATE", "WAITLIST_PRIORITY_LEVEL") VALUES (4, 'Previous UNSW Attendee', 170, 4);
+    INSERT INTO Y24GROUP054.PARENT_TYPE("TYPE_ID", "TYPE_NAME", "BASE_DAILY_RATE", "WAITLIST_PRIORITY_LEVEL") VALUES (5, 'Member of Public', 200, 5);
 END;
 /
 
 -- Populate Parents table
 BEGIN
-    addParent('Bobby Kessler', ADDR_OBJ(448, 'Jackson Circuit', 'Coral Gables', 'NSW', 2089), 'Claudia79@hotmail.com', '01 0447 9267', 'EMPLOYEE');
-    addParent('Julian Patel', ADDR_OBJ(615, 'Jonathan Parkway', 'Conroyberg', 'NSW', 2148), 'Angus_Beatty@gmail.com', '0460 768 687', 'EMPLOYEE');
-    addParent('Ronald Garden', ADDR_OBJ(753, 'Chelsea Avenue', 'Port Callum', 'NSW', 2137), 'Chloe_B_84@hotmail.com', '0429 836 761', 'EMPLOYEE');
-    addParent('Julius Fahey', ADDR_OBJ(695, 'Tahlia Road', 'Cartwrightburgh', 'NSW', 2577), 'Lara22@gmail.com', '+61 1 6446 7399', 'EMPLOYEE');
-    addParent('Sabrina Hall', ADDR_OBJ(456, 'George Pass', 'Lake Summer', 'NSW', 2310), 'Sebastian.Garden@hotmail.com', '04 0585 7877', 'EMPLOYEE');
-    addParent('Lillian Richards', ADDR_OBJ(101, 'Natalie View Rd', 'New Gabriel', 'NSW', 2941), 'Tahlia_A71@hotmail.com', '+61 3 6301 8876', 'EMPLOYEE');
-    addParent('Ernest Monahan', ADDR_OBJ(882, 'Bartell Loop', 'Cameronview', 'NSW', 2415), 'Joel84@gmail.com', '0407 889 841', 'EMPLOYEE');
-    addParent('Lindsey Boyer', ADDR_OBJ(89, 'Tremblay Drive', 'Claudiaview', 'NSW', 2268), 'Nate_Ernser46@hotmail.com', '+61 2 2254 3856', 'EMPLOYEE');
-    addParent('Amanda Price', ADDR_OBJ(30, 'Nader Lane', 'East Jake', 'NSW', 2780), 'Willow.Jenkins@yahoo.com', '0402 867 367', 'EMPLOYEE');
-    addParent('Mackenzie Wilson', ADDR_OBJ(42, 'Jacobi Crest', 'South Audreymouth', 'NSW', 3478), 'Nate.Martin81@hotmail.com', '+61 428 900 455', 'UNSW PHD');
-    addParent('Jacob Little', ADDR_OBJ(62, 'Amber Estate Dr', 'North Stephanieport', 'NSW', 3395), 'Owen28@yahoo.com', '+61 9 1321 2033', 'UNSW PHD');
-    addParent('Leah Scott', ADDR_OBJ(93, 'Swift Pass', 'Lake Beau', 'NSW', 3500), 'Mia66@yahoo.com', '+61 9 0384 7659', 'UNSW PHD');
-    addParent('Hayden Ross', ADDR_OBJ(39, 'Zara Square', 'North Aiden', 'NSW', 3113), 'Ali99@yahoo.com', '+61 0 2751 7705', 'UNSW PHD');
-    addParent('Mackenzie Morrison', ADDR_OBJ(83, 'Aidan Loop', 'East Alexbury', 'NSW', 3133), 'Kayla.Langworth51@hotmail.com', '+61 433 882 626', 'UNSW PHD');
-    addParent('Connor Waters', ADDR_OBJ(83, 'Khan Summit', 'East Rosemouth', 'NSW', 3882), 'Sebastian_Nguyen@yahoo.com', '+61 3 7231 3585', 'UNSW STAFF');
-    addParent('Thomas Hettinger', ADDR_OBJ(21, 'Kris Track', 'Albany', 'NSW', 3048), 'Taylor_Kreiger0@hotmail.com', '0495 193 714', 'UNSW STAFF');
-    addParent('Edward Ritchie', ADDR_OBJ(63, 'Jayden Parkway', 'Hugoborough', 'NSW', 3611), 'Sophia94@yahoo.com', '+61 5 6856 2353', 'UNSW STAFF');
-    addParent('Marcus Johnson', ADDR_OBJ(45, 'Bruen Station St', 'Lake Jordan', 'NSW', 3892), 'Samantha.Nguyen82@yahoo.com', '+61 7 9945 6219', 'UNSW STAFF');
-    addParent('Abbey Rees', ADDR_OBJ(03, 'Amelie Road', 'Port Angusfurt', 'NSW', 3038), 'Grace73@hotmail.com', '0424 768 349', 'UNSW STAFF');
-    addParent('Benjamin Farrell', ADDR_OBJ(56, 'Daugherty Grove', 'Morganmouth', 'NSW', 3017), 'Jackson_Abbott47@hotmail.com', '+61 456 158 817', 'UNSW PREV');
-    addParent('Amelie Daniel', ADDR_OBJ(12, 'Kreiger Track', 'East Xavier', 'NSW', 3864), 'Willow_Ebert66@yahoo.com', '0438 257 164', 'UNSW PREV');
-    addParent('Hamish Hughes', ADDR_OBJ(98, 'Richards Drive', 'Cameronfurt', 'NSW', 3172), 'Amelia_Moore@yahoo.com', '02 8226 3386', 'UNSW PREV');
-    addParent('Nicholas Richards', ADDR_OBJ(03, 'Nader Manor', 'Abbytown', 'NSW', 3761), 'Benjamin_Hackett47@hotmail.com', '00 2276 5758', 'UNSW PREV');
-    addParent('Emily Reynolds', ADDR_OBJ(68, 'Beier Loop', 'Boulder', 'NSW', 3384), 'Skye.Johns47@yahoo.com', '0413 521 521', 'UNSW PREV');
+    addParent('Mackenzie Wilson', ADDR_OBJ(42, 'Jacobi Crest', 'South Audreymouth', 'NSW', 3478), 'Nate.Martin81@hotmail.com', '+61 428 900 455', 'none');
+    addParent('Jacob Little', ADDR_OBJ(62, 'Amber Estate Dr', 'North Stephanieport', 'NSW', 3395), 'Owen28@yahoo.com', '+61 9 1321 2033', 'none');
+    addParent('Leah Scott', ADDR_OBJ(93, 'Swift Pass', 'Lake Beau', 'NSW', 3500), 'Mia66@yahoo.com', '+61 9 0384 7659', 'none');
+    addParent('Hayden Ross', ADDR_OBJ(39, 'Zara Square', 'North Aiden', 'NSW', 3113), 'Ali99@yahoo.com', '+61 0 2751 7705', 'none');
+    addParent('Mackenzie Morrison', ADDR_OBJ(83, 'Aidan Loop', 'East Alexbury', 'NSW', 3133), 'Kayla.Langworth51@hotmail.com', '+61 433 882 626', 'none');
+    addParent('Connor Waters', ADDR_OBJ(83, 'Khan Summit', 'East Rosemouth', 'NSW', 3882), 'Sebastian_Nguyen@yahoo.com', '+61 3 7231 3585', 'none');
+    addParent('Thomas Hettinger', ADDR_OBJ(21, 'Kris Track', 'Albany', 'NSW', 3048), 'Taylor_Kreiger0@hotmail.com', '0495 193 714', 'none');
+    addParent('Edward Ritchie', ADDR_OBJ(63, 'Jayden Parkway', 'Hugoborough', 'NSW', 3611), 'Sophia94@yahoo.com', '+61 5 6856 2353', 'none');
+    addParent('Marcus Johnson', ADDR_OBJ(45, 'Bruen Station St', 'Lake Jordan', 'NSW', 3892), 'Samantha.Nguyen82@yahoo.com', '+61 7 9945 6219', 'none');
+    addParent('Abbey Rees', ADDR_OBJ(03, 'Amelie Road', 'Port Angusfurt', 'NSW', 3038), 'Grace73@hotmail.com', '0424 768 349', 'none');
+    addParent('Benjamin Farrell', ADDR_OBJ(56, 'Daugherty Grove', 'Morganmouth', 'NSW', 3017), 'Jackson_Abbott47@hotmail.com', '+61 456 158 817', 'none');
+    addParent('Amelie Daniel', ADDR_OBJ(12, 'Kreiger Track', 'East Xavier', 'NSW', 3864), 'Willow_Ebert66@yahoo.com', '0438 257 164', 'none');
+    addParent('Hamish Hughes', ADDR_OBJ(98, 'Richards Drive', 'Cameronfurt', 'NSW', 3172), 'Amelia_Moore@yahoo.com', '02 8226 3386', 'none');
+    addParent('Nicholas Richards', ADDR_OBJ(03, 'Nader Manor', 'Abbytown', 'NSW', 3761), 'Benjamin_Hackett47@hotmail.com', '00 2276 5758', 'none');
+    addParent('Emily Reynolds', ADDR_OBJ(68, 'Beier Loop', 'Boulder', 'NSW', 3384), 'Skye.Johns47@yahoo.com', '0413 521 521', 'none');
     addParent('Leah Daugherty', ADDR_OBJ(85, 'Ava Parade', 'Great Falls', 'NSW', 3405), 'Hayley.Berge24@gmail.com', '+61 5 2747 9369', 'none');
     addParent('Aiden Rees', ADDR_OBJ(83, 'Evie Summit', 'Lewisburgh', 'NSW', 3607), 'Ava.Hartmann@hotmail.com', '+61 9 9917 2018', 'none');
     addParent('Victoria Greenholt', ADDR_OBJ(29, 'James Estate Dr', 'Port Bellamouth', 'NSW', 3122), 'Harrison_Jones7@hotmail.com', '+61 444 032 178', 'none');
@@ -94,40 +95,6 @@ BEGIN
 END;
 /
 
--- Populate parent type tables
-BEGIN
-    --balls
-    INSERT INTO Y24GROUP054.P_TYPE_EMPLOYEE("PARENT_ID", "EMPLOYEE_ID") VALUES (500000, 400005);
-    INSERT INTO Y24GROUP054.P_TYPE_EMPLOYEE("PARENT_ID", "EMPLOYEE_ID") VALUES (500001, 400006);
-    INSERT INTO Y24GROUP054.P_TYPE_EMPLOYEE("PARENT_ID", "EMPLOYEE_ID") VALUES (500002, 400007);
-    INSERT INTO Y24GROUP054.P_TYPE_EMPLOYEE("PARENT_ID", "EMPLOYEE_ID") VALUES (500003, 400008);
-    INSERT INTO Y24GROUP054.P_TYPE_EMPLOYEE("PARENT_ID", "EMPLOYEE_ID") VALUES (500004, 400009);
-    INSERT INTO Y24GROUP054.P_TYPE_EMPLOYEE("PARENT_ID", "EMPLOYEE_ID") VALUES (500005, 400010);
-    INSERT INTO Y24GROUP054.P_TYPE_EMPLOYEE("PARENT_ID", "EMPLOYEE_ID") VALUES (500006, 400011);
-    INSERT INTO Y24GROUP054.P_TYPE_EMPLOYEE("PARENT_ID", "EMPLOYEE_ID") VALUES (500007, 400012);
-    INSERT INTO Y24GROUP054.P_TYPE_EMPLOYEE("PARENT_ID", "EMPLOYEE_ID") VALUES (500008, 400013);
-
-
-    INSERT INTO Y24GROUP054.P_TYPE_UNSW_PHD("PARENT_ID", "ZID") VALUES (500009, 'z1234567');
-    INSERT INTO Y24GROUP054.P_TYPE_UNSW_PHD("PARENT_ID", "ZID") VALUES (500010, 'z9876543');
-    INSERT INTO Y24GROUP054.P_TYPE_UNSW_PHD("PARENT_ID", "ZID") VALUES (500011, 'z0000001');
-    INSERT INTO Y24GROUP054.P_TYPE_UNSW_PHD("PARENT_ID", "ZID") VALUES (500012, 'z1111111');
-    INSERT INTO Y24GROUP054.P_TYPE_UNSW_PHD("PARENT_ID", "ZID") VALUES (500013, 'z9999999');
-
-    INSERT INTO Y24GROUP054.P_TYPE_UNSW_STAFF("PARENT_ID", "ZID") VALUES (500014, 'z8765432');
-    INSERT INTO Y24GROUP054.P_TYPE_UNSW_STAFF("PARENT_ID", "ZID") VALUES (500015, 'z5555555');
-    INSERT INTO Y24GROUP054.P_TYPE_UNSW_STAFF("PARENT_ID", "ZID") VALUES (500016, 'z4444444');
-    INSERT INTO Y24GROUP054.P_TYPE_UNSW_STAFF("PARENT_ID", "ZID") VALUES (500017, 'z7777777');
-    INSERT INTO Y24GROUP054.P_TYPE_UNSW_STAFF("PARENT_ID", "ZID") VALUES (500018, 'z2222222');
-
-    INSERT INTO Y24GROUP054.P_TYPE_UNSW_PREV("PARENT_ID", "ZID", "LEAVE_DATE") VALUES (500019, 'z3333333', '17-Sep-2023');
-    INSERT INTO Y24GROUP054.P_TYPE_UNSW_PREV("PARENT_ID", "ZID", "LEAVE_DATE") VALUES (500020, 'z8888888', '02-Aug-2023');
-    INSERT INTO Y24GROUP054.P_TYPE_UNSW_PREV("PARENT_ID", "ZID", "LEAVE_DATE") VALUES (500021, 'z6543210', '12-May-2023');
-    INSERT INTO Y24GROUP054.P_TYPE_UNSW_PREV("PARENT_ID", "ZID", "LEAVE_DATE") VALUES (500022, 'z1357924', '13-Jun-2023');
-    INSERT INTO Y24GROUP054.P_TYPE_UNSW_PREV("PARENT_ID", "ZID", "LEAVE_DATE") VALUES (500023, 'z2468013', '08-Mar-2024');
-
-END;
-/
 -- Populate Waitlist Table
 BEGIN
     INSERT INTO Y24GROUP054.WAITLIST("DATE_ADDED") VALUES ('18-Apr-2023');
@@ -458,6 +425,136 @@ BEGIN
     INSERT INTO Y24GROUP054.CLASS_ACTIVITY("ACTIVITY_ID", "CLASS_ID") VALUES (6,123);
     INSERT INTO Y24GROUP054.CLASS_ACTIVITY("ACTIVITY_ID", "CLASS_ID") VALUES (19,92);
     COMMIT;
+END;
+/
+
+-- Inventory and Class Inventory
+BEGIN
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Crayons', 'Colorful wax sticks for drawing and coloring.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Building Blocks', 'Interlocking blocks for building towers and structures.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Storybooks', 'Engaging books for reading and storytelling sessions.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Play Dough', 'Soft, moldable clay for creative sculpting and molding.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Puzzle Set', 'Assorted puzzles for problem-solving and cognitive development.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Toy Cars', 'Miniature cars for imaginative play and racing games.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Stuffed Animals', 'Soft and cuddly toys for comfort and companionship.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Dress-Up Costumes', 'Costumes and props for imaginative dress-up play.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Musical Instruments', 'Tambourines, shakers, and xylophones for music exploration.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Play Kitchen Set', 'Miniature kitchen appliances and utensils for pretend cooking.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Outdoor Balls', 'Rubber balls for outdoor games and activities.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Paint Brushes', 'Brushes for painting and artistic expression.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Plastic Dinosaurs', 'Miniature dinosaur figures for imaginative play and learning.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Sand Toys', 'Buckets, shovels, and molds for sandcastle building.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Coloring Books', 'Coloring books with various themes and designs.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Doctor Kit', 'Toy medical instruments for role-playing as doctors and nurses.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Jump Ropes', 'Colorful ropes for jumping and physical activity.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Watercolor Paints', 'Water-based paints for artistic expression.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Board Games', 'Simple board games for group play and social interaction.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Dollhouse Set', 'Miniature dolls and furniture for imaginative play.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Sidewalk Chalk', 'Colorful chalk for outdoor drawing and hopscotch.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Bean Bags', 'Soft bags for tossing games and coordination activities.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Finger Paints', 'Washable paints for tactile art experiences.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Shape Sorter', 'Toy with various shapes for sorting and matching.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Bubble Solution', 'Bubble solution for blowing bubbles outdoors.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Balance Beam', 'Miniature balance beam for developing coordination.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Finger Puppets', 'Small puppets worn on fingers for storytelling.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Foam Blocks', 'Soft foam blocks for building and stacking.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Toy Tea Set', 'Miniature tea set for pretend tea parties.');
+    INSERT INTO Y24GROUP054.INVENTORY("NAME", "DESCRIPTION") VALUES ('Colorful Scarves', 'Brightly colored scarves for dancing and movement activities.');
+
+
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (5, 25);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (12, 16);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (8, 28);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (3, 10);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (9, 19);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (14, 22);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (2, 5);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (10, 30);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (7, 12);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (11, 26);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (6, 15);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (0, 3);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (13, 24);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (4, 29);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (1, 8);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (15, 20);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (8, 27);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (3, 6);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (9, 14);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (14, 23);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (2, 1);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (10, 5);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (7, 18);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (11, 28);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (6, 9);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (0, 25);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (13, 20);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (4, 11);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (1, 2);
+    INSERT INTO Y24GROUP054.ROOM_INVENTORY("ROOM_ID", "INVENTORY_ID") VALUES (15, 7);
+
+END;
+/
+
+    -- Payments
+BEGIN
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100004, 2087, '12-APR-2023', '01-JUL-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100001, 2349, '15-JUN-2023', '22-SEP-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100025, 1457, '22-MAR-2023', '17-AUG-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100013, 2154, '09-MAY-2023', '04-AUG-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100018, 3126, '28-JUL-2023', '21-NOV-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100022, 3198, '17-APR-2023', '18-JUL-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100019, 1576, '26-JAN-2023', '07-SEP-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100030, 1220, '18-SEP-2023', '14-JAN-2024', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100031, 3671, '03-JAN-2023', '23-SEP-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100033, 2589, '10-JUN-2023', '09-OCT-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100001, 3101, '15-JUL-2023', '04-DEC-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100005, 3416, '22-MAR-2023', '05-JUL-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100027, 2241, '04-MAY-2023', '26-AUG-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100008, 2683, '09-APR-2023', '19-JUL-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100024, 3443, '19-JAN-2023', '05-JUL-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100007, 1310, '03-JUN-2023', '18-NOV-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100030, 2751, '11-JAN-2023', '05-APR-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100002, 2220, '10-MAR-2023', '17-AUG-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100012, 2835, '05-JUL-2023', '09-NOV-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100015, 2895, '20-APR-2023', '18-JUL-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100033, 1318, '05-SEP-2023', '16-JAN-2024', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100027, 2324, '02-MAY-2023', '24-SEP-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100029, 1565, '14-JUL-2023', '07-DEC-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100020, 3203, '24-MAR-2023', '22-JUL-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100031, 2788, '08-JAN-2023', '05-JUN-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100010, 3741, '30-APR-2023', '25-NOV-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100014, 2833, '23-FEB-2023', '19-NOV-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100023, 2373, '28-JAN-2023', '01-MAY-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100032, 2153, '06-MAY-2023', '24-NOV-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100011, 1342, '01-FEB-2023', '06-JUN-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100026, 1268, '17-JAN-2023', '14-MAY-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100006, 1099, '02-APR-2023', '22-SEP-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100002, 1542, '10-JUN-2023', '03-DEC-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100028, 3074, '26-FEB-2023', '09-MAY-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100016, 2359, '07-JAN-2023', '22-JUL-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100009, 1851, '15-MAR-2023', '29-JUN-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100021, 3025, '05-MAY-2023', '09-NOV-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100003, 3520, '13-APR-2023', '26-SEP-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100017, 2806, '29-JAN-2023', '05-APR-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100014, 1313, '23-MAR-2023', '01-JUL-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100021, 2355, '14-JUN-2023', '05-NOV-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100032, 2376, '28-JAN-2023', '22-JUN-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100008, 2494, '10-FEB-2023', '18-JUN-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100019, 1830, '23-APR-2023', '01-JUN-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100025, 3076, '20-JAN-2023', '15-JUN-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100013, 1638, '14-MAY-2023', '08-NOV-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100027, 3699, '26-JAN-2023', '02-JUN-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100033, 3400, '03-APR-2023', '25-AUG-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100015, 1563, '20-MAR-2023', '08-AUG-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100010, 1869, '16-MAR-2023', '01-JUN-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100016, 1598, '30-JUN-2023', '07-NOV-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100012, 1159, '04-APR-2023', '11-AUG-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100005, 1221, '23-JAN-2023', '19-JUN-2023', 'PAID');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100006, 2529, '02-APR-2023', '01-JUL-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100022, 2952, '27-FEB-2023', '21-JUL-2023', 'OUTSTANDING');
+    INSERT INTO Y24GROUP054.PAYMENT("CHILD_ID", "AMOUNT", "DATE_ISSUE", "DATE_DUE", "STATUS") VALUES (100020, 2507, '03-JUN-2023', '26-SEP-2023', 'OUTSTANDING');
+
 END;
 /
 --footer
