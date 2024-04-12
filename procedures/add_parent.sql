@@ -25,7 +25,7 @@ BEGIN
     ELSIF prnt_type = 'UNSW PREV' THEN
       prnt_type_id := 4;
     ELSE
-      prnt_type_id := NULL;
+      prnt_type_id := 5;
     END IF;
 
     -- Check if parent with that name already exists

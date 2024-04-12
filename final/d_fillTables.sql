@@ -53,21 +53,30 @@ END;
 
 -- Populate Parents table
 BEGIN
-    addParent('Mackenzie Wilson', ADDR_OBJ(42, 'Jacobi Crest', 'South Audreymouth', 'NSW', 3478), 'Nate.Martin81@hotmail.com', '+61 428 900 455', 'none');
-    addParent('Jacob Little', ADDR_OBJ(62, 'Amber Estate Dr', 'North Stephanieport', 'NSW', 3395), 'Owen28@yahoo.com', '+61 9 1321 2033', 'none');
-    addParent('Leah Scott', ADDR_OBJ(93, 'Swift Pass', 'Lake Beau', 'NSW', 3500), 'Mia66@yahoo.com', '+61 9 0384 7659', 'none');
-    addParent('Hayden Ross', ADDR_OBJ(39, 'Zara Square', 'North Aiden', 'NSW', 3113), 'Ali99@yahoo.com', '+61 0 2751 7705', 'none');
-    addParent('Mackenzie Morrison', ADDR_OBJ(83, 'Aidan Loop', 'East Alexbury', 'NSW', 3133), 'Kayla.Langworth51@hotmail.com', '+61 433 882 626', 'none');
-    addParent('Connor Waters', ADDR_OBJ(83, 'Khan Summit', 'East Rosemouth', 'NSW', 3882), 'Sebastian_Nguyen@yahoo.com', '+61 3 7231 3585', 'none');
-    addParent('Thomas Hettinger', ADDR_OBJ(21, 'Kris Track', 'Albany', 'NSW', 3048), 'Taylor_Kreiger0@hotmail.com', '0495 193 714', 'none');
-    addParent('Edward Ritchie', ADDR_OBJ(63, 'Jayden Parkway', 'Hugoborough', 'NSW', 3611), 'Sophia94@yahoo.com', '+61 5 6856 2353', 'none');
-    addParent('Marcus Johnson', ADDR_OBJ(45, 'Bruen Station St', 'Lake Jordan', 'NSW', 3892), 'Samantha.Nguyen82@yahoo.com', '+61 7 9945 6219', 'none');
-    addParent('Abbey Rees', ADDR_OBJ(03, 'Amelie Road', 'Port Angusfurt', 'NSW', 3038), 'Grace73@hotmail.com', '0424 768 349', 'none');
-    addParent('Benjamin Farrell', ADDR_OBJ(56, 'Daugherty Grove', 'Morganmouth', 'NSW', 3017), 'Jackson_Abbott47@hotmail.com', '+61 456 158 817', 'none');
-    addParent('Amelie Daniel', ADDR_OBJ(12, 'Kreiger Track', 'East Xavier', 'NSW', 3864), 'Willow_Ebert66@yahoo.com', '0438 257 164', 'none');
-    addParent('Hamish Hughes', ADDR_OBJ(98, 'Richards Drive', 'Cameronfurt', 'NSW', 3172), 'Amelia_Moore@yahoo.com', '02 8226 3386', 'none');
-    addParent('Nicholas Richards', ADDR_OBJ(03, 'Nader Manor', 'Abbytown', 'NSW', 3761), 'Benjamin_Hackett47@hotmail.com', '00 2276 5758', 'none');
-    addParent('Emily Reynolds', ADDR_OBJ(68, 'Beier Loop', 'Boulder', 'NSW', 3384), 'Skye.Johns47@yahoo.com', '0413 521 521', 'none');
+    addParent('Bobby Kessler', ADDR_OBJ(448, 'Jackson Circuit', 'Coral Gables', 'NSW', 2089), 'Claudia79@hotmail.com', '01 0447 9267', 'EMPLOYEE');
+    addParent('Julian Patel', ADDR_OBJ(615, 'Jonathan Parkway', 'Conroyberg', 'NSW', 2148), 'Angus_Beatty@gmail.com', '0460 768 687', 'EMPLOYEE');
+    addParent('Ronald Garden', ADDR_OBJ(753, 'Chelsea Avenue', 'Port Callum', 'NSW', 2137), 'Chloe_B_84@hotmail.com', '0429 836 761', 'EMPLOYEE');
+    addParent('Julius Fahey', ADDR_OBJ(695, 'Tahlia Road', 'Cartwrightburgh', 'NSW', 2577), 'Lara22@gmail.com', '+61 1 6446 7399', 'EMPLOYEE');
+    addParent('Sabrina Hall', ADDR_OBJ(456, 'George Pass', 'Lake Summer', 'NSW', 2310), 'Sebastian.Garden@hotmail.com', '04 0585 7877', 'EMPLOYEE');
+    addParent('Lillian Richards', ADDR_OBJ(101, 'Natalie View Rd', 'New Gabriel', 'NSW', 2941), 'Tahlia_A71@hotmail.com', '+61 3 6301 8876', 'EMPLOYEE');
+    addParent('Ernest Monahan', ADDR_OBJ(882, 'Bartell Loop', 'Cameronview', 'NSW', 2415), 'Joel84@gmail.com', '0407 889 841', 'EMPLOYEE');
+    addParent('Lindsey Boyer', ADDR_OBJ(89, 'Tremblay Drive', 'Claudiaview', 'NSW', 2268), 'Nate_Ernser46@hotmail.com', '+61 2 2254 3856', 'EMPLOYEE');
+    addParent('Amanda Price', ADDR_OBJ(30, 'Nader Lane', 'East Jake', 'NSW', 2780), 'Willow.Jenkins@yahoo.com', '0402 867 367', 'EMPLOYEE');
+    addParent('Mackenzie Wilson', ADDR_OBJ(42, 'Jacobi Crest', 'South Audreymouth', 'NSW', 3478), 'Nate.Martin81@hotmail.com', '+61 428 900 455', 'UNSW PHD');
+    addParent('Jacob Little', ADDR_OBJ(62, 'Amber Estate Dr', 'North Stephanieport', 'NSW', 3395), 'Owen28@yahoo.com', '+61 9 1321 2033', 'UNSW PHD');
+    addParent('Leah Scott', ADDR_OBJ(93, 'Swift Pass', 'Lake Beau', 'NSW', 3500), 'Mia66@yahoo.com', '+61 9 0384 7659', 'UNSW PHD');
+    addParent('Hayden Ross', ADDR_OBJ(39, 'Zara Square', 'North Aiden', 'NSW', 3113), 'Ali99@yahoo.com', '+61 0 2751 7705', 'UNSW PHD');
+    addParent('Mackenzie Morrison', ADDR_OBJ(83, 'Aidan Loop', 'East Alexbury', 'NSW', 3133), 'Kayla.Langworth51@hotmail.com', '+61 433 882 626', 'UNSW PHD');
+    addParent('Connor Waters', ADDR_OBJ(83, 'Khan Summit', 'East Rosemouth', 'NSW', 3882), 'Sebastian_Nguyen@yahoo.com', '+61 3 7231 3585', 'UNSW STAFF');
+    addParent('Thomas Hettinger', ADDR_OBJ(21, 'Kris Track', 'Albany', 'NSW', 3048), 'Taylor_Kreiger0@hotmail.com', '0495 193 714', 'UNSW STAFF');
+    addParent('Edward Ritchie', ADDR_OBJ(63, 'Jayden Parkway', 'Hugoborough', 'NSW', 3611), 'Sophia94@yahoo.com', '+61 5 6856 2353', 'UNSW STAFF');
+    addParent('Marcus Johnson', ADDR_OBJ(45, 'Bruen Station St', 'Lake Jordan', 'NSW', 3892), 'Samantha.Nguyen82@yahoo.com', '+61 7 9945 6219', 'UNSW STAFF');
+    addParent('Abbey Rees', ADDR_OBJ(03, 'Amelie Road', 'Port Angusfurt', 'NSW', 3038), 'Grace73@hotmail.com', '0424 768 349', 'UNSW STAFF');
+    addParent('Benjamin Farrell', ADDR_OBJ(56, 'Daugherty Grove', 'Morganmouth', 'NSW', 3017), 'Jackson_Abbott47@hotmail.com', '+61 456 158 817', 'UNSW PREV');
+    addParent('Amelie Daniel', ADDR_OBJ(12, 'Kreiger Track', 'East Xavier', 'NSW', 3864), 'Willow_Ebert66@yahoo.com', '0438 257 164', 'UNSW PREV');
+    addParent('Hamish Hughes', ADDR_OBJ(98, 'Richards Drive', 'Cameronfurt', 'NSW', 3172), 'Amelia_Moore@yahoo.com', '02 8226 3386', 'UNSW PREV');
+    addParent('Nicholas Richards', ADDR_OBJ(03, 'Nader Manor', 'Abbytown', 'NSW', 3761), 'Benjamin_Hackett47@hotmail.com', '00 2276 5758', 'UNSW PREV');
+    addParent('Emily Reynolds', ADDR_OBJ(68, 'Beier Loop', 'Boulder', 'NSW', 3384), 'Skye.Johns47@yahoo.com', '0413 521 521', 'UNSW PREV');
     addParent('Leah Daugherty', ADDR_OBJ(85, 'Ava Parade', 'Great Falls', 'NSW', 3405), 'Hayley.Berge24@gmail.com', '+61 5 2747 9369', 'none');
     addParent('Aiden Rees', ADDR_OBJ(83, 'Evie Summit', 'Lewisburgh', 'NSW', 3607), 'Ava.Hartmann@hotmail.com', '+61 9 9917 2018', 'none');
     addParent('Victoria Greenholt', ADDR_OBJ(29, 'James Estate Dr', 'Port Bellamouth', 'NSW', 3122), 'Harrison_Jones7@hotmail.com', '+61 444 032 178', 'none');
@@ -85,6 +94,40 @@ BEGIN
 END;
 /
 
+-- Populate parent type tables
+BEGIN
+    --balls
+    INSERT INTO Y24GROUP054.P_TYPE_EMPLOYEE("PARENT_ID", "EMPLOYEE_ID") VALUES (500000, 400005);
+    INSERT INTO Y24GROUP054.P_TYPE_EMPLOYEE("PARENT_ID", "EMPLOYEE_ID") VALUES (500001, 400006);
+    INSERT INTO Y24GROUP054.P_TYPE_EMPLOYEE("PARENT_ID", "EMPLOYEE_ID") VALUES (500002, 400007);
+    INSERT INTO Y24GROUP054.P_TYPE_EMPLOYEE("PARENT_ID", "EMPLOYEE_ID") VALUES (500003, 400008);
+    INSERT INTO Y24GROUP054.P_TYPE_EMPLOYEE("PARENT_ID", "EMPLOYEE_ID") VALUES (500004, 400009);
+    INSERT INTO Y24GROUP054.P_TYPE_EMPLOYEE("PARENT_ID", "EMPLOYEE_ID") VALUES (500005, 400010);
+    INSERT INTO Y24GROUP054.P_TYPE_EMPLOYEE("PARENT_ID", "EMPLOYEE_ID") VALUES (500006, 400011);
+    INSERT INTO Y24GROUP054.P_TYPE_EMPLOYEE("PARENT_ID", "EMPLOYEE_ID") VALUES (500007, 400012);
+    INSERT INTO Y24GROUP054.P_TYPE_EMPLOYEE("PARENT_ID", "EMPLOYEE_ID") VALUES (500008, 400013);
+
+
+    INSERT INTO Y24GROUP054.P_TYPE_UNSW_PHD("PARENT_ID", "ZID") VALUES (500009, 'z1234567');
+    INSERT INTO Y24GROUP054.P_TYPE_UNSW_PHD("PARENT_ID", "ZID") VALUES (500010, 'z9876543');
+    INSERT INTO Y24GROUP054.P_TYPE_UNSW_PHD("PARENT_ID", "ZID") VALUES (500011, 'z0000001');
+    INSERT INTO Y24GROUP054.P_TYPE_UNSW_PHD("PARENT_ID", "ZID") VALUES (500012, 'z1111111');
+    INSERT INTO Y24GROUP054.P_TYPE_UNSW_PHD("PARENT_ID", "ZID") VALUES (500013, 'z9999999');
+
+    INSERT INTO Y24GROUP054.P_TYPE_UNSW_STAFF("PARENT_ID", "ZID") VALUES (500014, 'z8765432');
+    INSERT INTO Y24GROUP054.P_TYPE_UNSW_STAFF("PARENT_ID", "ZID") VALUES (500015, 'z5555555');
+    INSERT INTO Y24GROUP054.P_TYPE_UNSW_STAFF("PARENT_ID", "ZID") VALUES (500016, 'z4444444');
+    INSERT INTO Y24GROUP054.P_TYPE_UNSW_STAFF("PARENT_ID", "ZID") VALUES (500017, 'z7777777');
+    INSERT INTO Y24GROUP054.P_TYPE_UNSW_STAFF("PARENT_ID", "ZID") VALUES (500018, 'z2222222');
+
+    INSERT INTO Y24GROUP054.P_TYPE_UNSW_PREV("PARENT_ID", "ZID", "LEAVE_DATE") VALUES (500019, 'z3333333', '17-Sep-2023');
+    INSERT INTO Y24GROUP054.P_TYPE_UNSW_PREV("PARENT_ID", "ZID", "LEAVE_DATE") VALUES (500020, 'z8888888', '02-Aug-2023');
+    INSERT INTO Y24GROUP054.P_TYPE_UNSW_PREV("PARENT_ID", "ZID", "LEAVE_DATE") VALUES (500021, 'z6543210', '12-May-2023');
+    INSERT INTO Y24GROUP054.P_TYPE_UNSW_PREV("PARENT_ID", "ZID", "LEAVE_DATE") VALUES (500022, 'z1357924', '13-Jun-2023');
+    INSERT INTO Y24GROUP054.P_TYPE_UNSW_PREV("PARENT_ID", "ZID", "LEAVE_DATE") VALUES (500023, 'z2468013', '08-Mar-2024');
+
+END;
+/
 -- Populate Waitlist Table
 BEGIN
     INSERT INTO Y24GROUP054.WAITLIST("DATE_ADDED") VALUES ('18-Apr-2023');
