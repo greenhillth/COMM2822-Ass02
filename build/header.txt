@@ -1,1 +1,6 @@
---header
+/*
+    Second section of SQL Build Script. Used to add tables and define primary keys.
+
+    WRITTEN BY: Tom Greenhill z5309693
+    LAST MODIFICATION: Sun Apr 14 2024 16:37:13 GMT+1000 (Australian Eastern Standard Time)
+*/

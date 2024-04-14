@@ -1,4 +1,9 @@
---header
+/*
+    Second section of SQL Build Script. Used to add tables and define primary keys.
+
+    WRITTEN BY: Tom Greenhill z5309693
+    LAST MODIFICATION: Sun Apr 14 2024 16:37:13 GMT+1000 (Australian Eastern Standard Time)
+*/
 CREATE TABLE "Y24GROUP054"."ACTIVITY" (
     "ACTIVITY_ID" INTEGER DEFAULT ACTIVITY_ID_SEQ.NEXTVAL
     CONSTRAINT ACTIVITY_ID_PK PRIMARY KEY ENABLE,
@@ -153,4 +158,7 @@ CREATE TABLE "Y24GROUP054"."WAITLIST" (
         CONSTRAINT WAITLIST_ID_PK PRIMARY KEY ENABLE,
     "DATE_ADDED" DATE
 );
---footer
+
+/*
+    END BUILD SECTION
+*/

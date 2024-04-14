@@ -1,1 +1,4 @@
---footer
+
+/*
+    END INSERT SECTION
+*/

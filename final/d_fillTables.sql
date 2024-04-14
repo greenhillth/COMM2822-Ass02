@@ -1,4 +1,11 @@
---header
+
+/*
+    Final section of SQL Build Script for Assignment Part B. Used to fill tables with sample data,
+    leveraging methods defined earlier to make my job easier.
+
+    WRITTEN BY: Tom Greenhill z5309693
+    LAST MODIFICATION: Sun Apr 14 2024 16:37:13 GMT+1000 (Australian Eastern Standard Time)
+*/
 -- clear tables
 BEGIN
     DELETE FROM ACTIVITY;
@@ -598,4 +605,7 @@ BEGIN
     COMMIT;
 END;
 /
---footer
+
+/*
+    END INSERT SECTION
+*/

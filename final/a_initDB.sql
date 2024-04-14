@@ -1,4 +1,10 @@
---header
+/*
+    First section of SQL Build Script for Assignment Part B. Used to initialise database by setting sequences
+    and defining some custom structs for use in entity tables.
+    
+    WRITTEN BY: Tom Greenhill z5309693
+    LAST MODIFICATION: Sun Apr 14 2024 19:02:52 GMT+1000 (Australian Eastern Standard Time)
+*/
 CREATE
 OR REPLACE TYPE ADDR_OBJ AS OBJECT (
     num NUMBER(4, 0),
@@ -159,4 +165,7 @@ CREATE SEQUENCE "Y24GROUP054"."TYPE_ID_SEQ"
     MINVALUE 1
     MAXVALUE 2147483647
     NOCACHE;
---footer
+
+/*
+    END INITIALISATION SECTION
+*/

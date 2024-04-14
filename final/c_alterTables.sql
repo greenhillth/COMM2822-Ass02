@@ -1,4 +1,11 @@
---header
+/*
+    Third component of SQL Build Script. Used to alter existing tables to add
+    foreign keys and other constraints, as well as define custom methods for 
+    interacting with DB (mostly just making data insertion easier)
+
+    WRITTEN BY: Tom Greenhill z5309693
+    LAST MODIFICATION: Sun Apr 14 2024 16:37:13 GMT+1000 (Australian Eastern Standard Time)
+*/
 -- Modify Activity table
 ALTER TABLE "Y24GROUP054"."ACTIVITY"
 ADD (
@@ -627,4 +634,7 @@ SELECT table_name AS "Table",
 FROM user_tables
 ORDER BY "Number of rows";
 /
---footer
+
+/*
+    END ALTER SECTION
+*/
