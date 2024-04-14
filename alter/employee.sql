@@ -14,7 +14,7 @@ ADD (
 -- Comments 
 COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."EMPLOYEE_ID" IS 'Primary key of employees table.';
 COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."FIRST_NAME" IS 'Employee first name. Non-null values only.';
-COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."LAST_NAME" IS 'Employee last name. Non-null values only.';
+COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."SURNAME" IS 'Employee last name. Non-null values only.';
 COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."EMAIL" IS 'Employee email address';
 COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."CONTACT_NUMBER" IS 'Employee phone number, contains area extenstions';
 COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."HIRE_DATE" IS 'Start date of employment. A not null column.';

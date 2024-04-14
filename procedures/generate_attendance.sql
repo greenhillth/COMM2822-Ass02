@@ -22,7 +22,7 @@ BEGIN
             -- Look up the primary key (person_id) for the name
             SELECT CHILD_ID INTO i_child_id
             FROM CHILD
-            WHERE (first_name || ' ' || last_name) = childArray(i);
+            WHERE (first_name || ' ' || SURNAME) = childArray(i);
 
             -- Insert into the attendance table
             INSERT INTO "CHILD_ATTENDANCE" (CHILD_ID, CLASS_ID, ARRIVAL, DEPARTURE) 
@@ -45,7 +45,7 @@ BEGIN
             -- Look up the primary key (person_id) for the name
             SELECT EMPLOYEE_ID INTO i_staff_id
             FROM EMPLOYEE
-            WHERE (first_name || ' ' || last_name) = staffArray(i);
+            WHERE (first_name || ' ' || SURNAME) = staffArray(i);
 
             -- Insert into the attendance table
             INSERT INTO "EMPLOYEE_ATTENDANCE" (EMPLOYEE_ID, CLASS_ID, ARRIVAL, DEPARTURE) 

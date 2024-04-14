@@ -19,11 +19,11 @@ BEGIN
     -- Get parent ID from name
     SELECT "PARENT_ID" INTO prnt_id
     FROM "PARENT"
-    WHERE ("FIRST_NAME" || ' ' || "LAST_NAME") = parent_name;
+    WHERE ("FIRST_NAME" || ' ' || "SURNAME") = parent_name;
     
     -- Insert into database
     INSERT INTO
-    "CHILD"(PARENT_ID, FIRST_NAME, LAST_NAME, DOB, EMERGENCY_CONTACT, WAITLIST_ID, CCS_PERCENTAGE)
+    "CHILD"(PARENT_ID, FIRST_NAME, SURNAME, DOB, EMERGENCY_CONTACT, WAITLIST_ID, CCS_PERCENTAGE)
     VALUES
         (prnt_id, name_first, name_last, c_dob, e_contact, wlist_id, ccs_pctge);
     COMMIT;

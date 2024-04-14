@@ -14,7 +14,7 @@ ADD (
 -- Comments 
 COMMENT ON COLUMN "Y24GROUP054"."PARENT"."PARENT_ID" IS 'Primary key of parent table.';
 COMMENT ON COLUMN "Y24GROUP054"."PARENT"."FIRST_NAME" IS 'Parent first name. Non-null values only.';
-COMMENT ON COLUMN "Y24GROUP054"."PARENT"."LAST_NAME" IS 'Parent last name. Non-null values only.';
+COMMENT ON COLUMN "Y24GROUP054"."PARENT"."SURNAME" IS 'Parent last name. Non-null values only.';
 COMMENT ON COLUMN "Y24GROUP054"."PARENT"."TYPE" IS 'Type of parent. References PARENT_TYPE table.';
 COMMENT ON COLUMN "Y24GROUP054"."PARENT"."EMAIL" IS 'Parent email address';
 COMMENT ON COLUMN "Y24GROUP054"."PARENT"."CONTACT_NUMBER" IS 'Parent phone number, contains area extenstions';

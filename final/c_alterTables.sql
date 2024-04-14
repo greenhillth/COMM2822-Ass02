@@ -56,7 +56,7 @@ COMMENT ON COLUMN "Y24GROUP054"."CHILD"."CHILD_ID" IS 'Primary key of Child tabl
 COMMENT ON COLUMN "Y24GROUP054"."CHILD"."PARENT_ID" IS 'Foreign key to referenced Parent ID. Not nullable.';
 COMMENT ON COLUMN "Y24GROUP054"."CHILD"."WAITLIST_ID" IS 'Foreign key to referenced Waitlist ID. Nullable as child may not be on waitlist.';
 COMMENT ON COLUMN "Y24GROUP054"."CHILD"."FIRST_NAME" IS 'First name of child. Max size: 20 chars.';
-COMMENT ON COLUMN "Y24GROUP054"."CHILD"."LAST_NAME" IS 'Last name of child. Max size: 25 chars.';
+COMMENT ON COLUMN "Y24GROUP054"."CHILD"."SURNAME" IS 'Last name of child. Max size: 25 chars.';
 COMMENT ON COLUMN "Y24GROUP054"."CHILD"."EMERGENCY_CONTACT" IS 'Information about emergency contact. Stored as a Contact object.';
 COMMENT ON COLUMN "Y24GROUP054"."CHILD"."CCS_PERCENTAGE" IS 'Decimal number between 0-1 representing percentage CCS subsidy. Precision: 4 decimal places.';
 COMMENT ON COLUMN "Y24GROUP054"."CHILD"."DOB" IS 'Date of birth of child. Stored as a datetime object with the time set to 12:00am.';
@@ -118,7 +118,7 @@ ADD (
 -- Comments 
 COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."EMPLOYEE_ID" IS 'Primary key of employees table.';
 COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."FIRST_NAME" IS 'Employee first name. Non-null values only.';
-COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."LAST_NAME" IS 'Employee last name. Non-null values only.';
+COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."SURNAME" IS 'Employee last name. Non-null values only.';
 COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."EMAIL" IS 'Employee email address';
 COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."CONTACT_NUMBER" IS 'Employee phone number, contains area extenstions';
 COMMENT ON COLUMN "Y24GROUP054"."EMPLOYEE"."HIRE_DATE" IS 'Start date of employment. A not null column.';
@@ -143,28 +143,28 @@ ADD (
     --null
 );
 /
-ALTER TABLE "Y24GROUP054"."P_TYPE_EMPLOYEE"
+ALTER TABLE "Y24GROUP054"."SDN_EMPLOYEE_PARENT"
 ADD (
     -- Foreign Keys
     CONSTRAINT PTYPE_EMP_PRNT_FK FOREIGN KEY ("PARENT_ID") references "PARENT" ("PARENT_ID"),
     CONSTRAINT PTYPE_EMP_PRT_FK FOREIGN KEY ("EMPLOYEE_ID") references "EMPLOYEE" ("EMPLOYEE_ID")
 );
 
-ALTER TABLE "Y24GROUP054"."P_TYPE_UNSW_PHD"
+ALTER TABLE "Y24GROUP054"."UNSW_PHD_PARENT"
 ADD (
     -- Foreign Keys
     CONSTRAINT PTYPE_PHD_PRNT_FK FOREIGN KEY ("PARENT_ID") references "PARENT" ("PARENT_ID"),
     CONSTRAINT CHECK_ZID_VALID_PHD CHECK (REGEXP_LIKE(id, '^z\d{7}$'))
 );
 
-ALTER TABLE "Y24GROUP054"."P_TYPE_UNSW_STAFF"
+ALTER TABLE "Y24GROUP054"."UNSW_STAFF_PARENT"
 ADD (
     -- Foreign Keys
     CONSTRAINT PTYPE_STAFF_PRNT_FK FOREIGN KEY ("PARENT_ID") references "PARENT" ("PARENT_ID"),
     CONSTRAINT CHECK_ZID_VALID_STAFF CHECK (REGEXP_LIKE(id, '^z\d{7}$'))
 );
 
-ALTER TABLE "Y24GROUP054"."P_TYPE_UNSW_PREV"
+ALTER TABLE "Y24GROUP054"."PREVIOUS_UNSW_PARENT"
 ADD (
     -- Foreign Keys
     CONSTRAINT PTYPE_PREV_PRNT_FK FOREIGN KEY ("PARENT_ID") references "PARENT" ("PARENT_ID")
@@ -177,26 +177,26 @@ COMMENT ON COLUMN "Y24GROUP054"."PARENT_TYPE"."TYPE_NAME" IS 'Holds text represe
 COMMENT ON COLUMN "Y24GROUP054"."PARENT_TYPE"."BASE_DAILY_RATE" IS 'Daily rate of specified type. Number between 0-9999.';
 COMMENT ON COLUMN "Y24GROUP054"."PARENT_TYPE"."WAITLIST_PRIORITY_LEVEL" IS 'Priority level each type granted when joining waitlist. Number between 1 (highest) to 5 (lowest).';
 
-COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_EMPLOYEE"."RECORD_ID" IS 'Identifier record for given parent. Primary key and unique across all parent types.';
-COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_EMPLOYEE"."TYPE_ID" IS 'Identifier of parent type. Holds a value of either 1 (Employee), 2 (PHD), 3 (UNSW Staff) or 4 (Ex-UNSW). Links to PARENT_TYPE table.';
-COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_EMPLOYEE"."PARENT_ID" IS 'ID of affiliated parent. Foreign key.';
-COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_EMPLOYEE"."EMPLOYEE_ID" IS 'Employee ID of affiliated parent. Foreign key.';
+COMMENT ON COLUMN "Y24GROUP054"."SDN_EMPLOYEE_PARENT"."RECORD_ID" IS 'Identifier record for given parent. Primary key and unique across all parent types.';
+COMMENT ON COLUMN "Y24GROUP054"."SDN_EMPLOYEE_PARENT"."TYPE_ID" IS 'Identifier of parent type. Holds a value of either 1 (Employee), 2 (PHD), 3 (UNSW Staff) or 4 (Ex-UNSW). Links to PARENT_TYPE table.';
+COMMENT ON COLUMN "Y24GROUP054"."SDN_EMPLOYEE_PARENT"."PARENT_ID" IS 'ID of affiliated parent. Foreign key.';
+COMMENT ON COLUMN "Y24GROUP054"."SDN_EMPLOYEE_PARENT"."EMPLOYEE_ID" IS 'Employee ID of affiliated parent. Foreign key.';
 
-COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_PHD"."RECORD_ID" IS 'Identifier record for given parent. Primary key and unique across all parent types.';
-COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_PHD"."TYPE_ID" IS 'Identifier of parent type. Holds a value of either 1 (Employee), 2 (PHD), 3 (UNSW Staff) or 4 (Ex-UNSW). Links to PARENT_TYPE table.';
-COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_PHD"."PARENT_ID" IS 'ID of affiliated parent. Foreign key.';
-COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_PHD"."Z_ID" IS 'zID of affiliated parent. Must be in valid zID format.';
+COMMENT ON COLUMN "Y24GROUP054"."UNSW_PHD_PARENT"."RECORD_ID" IS 'Identifier record for given parent. Primary key and unique across all parent types.';
+COMMENT ON COLUMN "Y24GROUP054"."UNSW_PHD_PARENT"."TYPE_ID" IS 'Identifier of parent type. Holds a value of either 1 (Employee), 2 (PHD), 3 (UNSW Staff) or 4 (Ex-UNSW). Links to PARENT_TYPE table.';
+COMMENT ON COLUMN "Y24GROUP054"."UNSW_PHD_PARENT"."PARENT_ID" IS 'ID of affiliated parent. Foreign key.';
+COMMENT ON COLUMN "Y24GROUP054"."UNSW_PHD_PARENT"."Z_ID" IS 'zID of affiliated parent. Must be in valid zID format.';
 
-COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_STAFF"."RECORD_ID" IS 'Identifier record for given parent. Primary key and unique across all parent types.';
-COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_STAFF"."TYPE_ID" IS 'Identifier of parent type. Holds a value of either 1 (Employee), 2 (PHD), 3 (UNSW Staff) or 4 (Ex-UNSW). Links to PARENT_TYPE table.';
-COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_STAFF"."PARENT_ID" IS 'ID of affiliated parent. Foreign key.';
-COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_STAFF"."Z_ID" IS 'zID of affiliated parent. Must be in valid zID format.';
+COMMENT ON COLUMN "Y24GROUP054"."UNSW_STAFF_PARENT"."RECORD_ID" IS 'Identifier record for given parent. Primary key and unique across all parent types.';
+COMMENT ON COLUMN "Y24GROUP054"."UNSW_STAFF_PARENT"."TYPE_ID" IS 'Identifier of parent type. Holds a value of either 1 (Employee), 2 (PHD), 3 (UNSW Staff) or 4 (Ex-UNSW). Links to PARENT_TYPE table.';
+COMMENT ON COLUMN "Y24GROUP054"."UNSW_STAFF_PARENT"."PARENT_ID" IS 'ID of affiliated parent. Foreign key.';
+COMMENT ON COLUMN "Y24GROUP054"."UNSW_STAFF_PARENT"."Z_ID" IS 'zID of affiliated parent. Must be in valid zID format.';
 
-COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_PREV"."RECORD_ID" IS 'Identifier record for given parent. Primary key and unique across all parent types.';
-COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_PREV"."TYPE_ID" IS 'Identifier of parent type. Holds a value of either 1 (Employee), 2 (PHD), 3 (UNSW Staff) or 4 (Ex-UNSW). Links to PARENT_TYPE table.';
-COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_PREV"."PARENT_ID" IS 'ID of affiliated parent. Foreign key.';
-COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_PREV"."Z_ID" IS 'zID of affiliated parent. Optional.';
-COMMENT ON COLUMN "Y24GROUP054"."P_TYPE_UNSW_PREV"."LEAVE_DATE" IS 'UNSW leave date of affiliated parent. Not null.';
+COMMENT ON COLUMN "Y24GROUP054"."PREVIOUS_UNSW_PARENT"."RECORD_ID" IS 'Identifier record for given parent. Primary key and unique across all parent types.';
+COMMENT ON COLUMN "Y24GROUP054"."PREVIOUS_UNSW_PARENT"."TYPE_ID" IS 'Identifier of parent type. Holds a value of either 1 (Employee), 2 (PHD), 3 (UNSW Staff) or 4 (Ex-UNSW). Links to PARENT_TYPE table.';
+COMMENT ON COLUMN "Y24GROUP054"."PREVIOUS_UNSW_PARENT"."PARENT_ID" IS 'ID of affiliated parent. Foreign key.';
+COMMENT ON COLUMN "Y24GROUP054"."PREVIOUS_UNSW_PARENT"."Z_ID" IS 'zID of affiliated parent. Optional.';
+COMMENT ON COLUMN "Y24GROUP054"."PREVIOUS_UNSW_PARENT"."LEAVE_DATE" IS 'UNSW leave date of affiliated parent. Not null.';
 -- Modify Parent table
 ALTER TABLE "Y24GROUP054"."PARENT"
 ADD (
@@ -213,7 +213,7 @@ ADD (
 -- Comments 
 COMMENT ON COLUMN "Y24GROUP054"."PARENT"."PARENT_ID" IS 'Primary key of parent table.';
 COMMENT ON COLUMN "Y24GROUP054"."PARENT"."FIRST_NAME" IS 'Parent first name. Non-null values only.';
-COMMENT ON COLUMN "Y24GROUP054"."PARENT"."LAST_NAME" IS 'Parent last name. Non-null values only.';
+COMMENT ON COLUMN "Y24GROUP054"."PARENT"."SURNAME" IS 'Parent last name. Non-null values only.';
 COMMENT ON COLUMN "Y24GROUP054"."PARENT"."TYPE" IS 'Type of parent. References PARENT_TYPE table.';
 COMMENT ON COLUMN "Y24GROUP054"."PARENT"."EMAIL" IS 'Parent email address';
 COMMENT ON COLUMN "Y24GROUP054"."PARENT"."CONTACT_NUMBER" IS 'Parent phone number, contains area extenstions';
@@ -272,11 +272,11 @@ BEGIN
     -- Get parent ID from name
     SELECT "PARENT_ID" INTO prnt_id
     FROM "PARENT"
-    WHERE ("FIRST_NAME" || ' ' || "LAST_NAME") = parent_name;
+    WHERE ("FIRST_NAME" || ' ' || "SURNAME") = parent_name;
     
     -- Insert into database
     INSERT INTO
-    "CHILD"(PARENT_ID, FIRST_NAME, LAST_NAME, DOB, EMERGENCY_CONTACT, WAITLIST_ID, CCS_PERCENTAGE)
+    "CHILD"(PARENT_ID, FIRST_NAME, SURNAME, DOB, EMERGENCY_CONTACT, WAITLIST_ID, CCS_PERCENTAGE)
     VALUES
         (prnt_id, name_first, name_last, c_dob, e_contact, wlist_id, ccs_pctge);
     COMMIT;
@@ -352,12 +352,12 @@ BEGIN
     SELECT "EMPLOYEE_ID" INTO emp_id
     FROM "EMPLOYEE"
     WHERE "FIRST_NAME" = name_first AND
-     "LAST_NAME" = name_last;
+     "SURNAME" = name_last;
     DBMS_OUTPUT.PUT_LINE('Employee already exists in database, overwriting');
     
     UPDATE EMPLOYEE
     SET
-        FIRST_NAME = name_first, LAST_NAME = name_last,
+        FIRST_NAME = name_first, SURNAME = name_last,
         HIRE_DATE = date_hire, ADDRESS = emp_addr,
         EMAIL = emp_email, CONTACT_NUMBER = ph_num,
         SALARY = emp_salary
@@ -368,7 +368,7 @@ BEGIN
     EXCEPTION
     WHEN NO_DATA_FOUND THEN
         INSERT INTO
-        "EMPLOYEE"(FIRST_NAME, LAST_NAME, HIRE_DATE, ADDRESS, EMAIL, CONTACT_NUMBER, SALARY)
+        "EMPLOYEE"(FIRST_NAME, SURNAME, HIRE_DATE, ADDRESS, EMAIL, CONTACT_NUMBER, SALARY)
         VALUES
             (name_first, name_last, date_hire, emp_addr, emp_email, ph_num, emp_salary);
         COMMIT;
@@ -421,14 +421,14 @@ BEGIN
     SELECT "PARENT_ID" INTO prnt_id
     FROM "PARENT"
     WHERE "FIRST_NAME" = name_first AND
-     "LAST_NAME" = name_last;
+     "SURNAME" = name_last;
     DBMS_OUTPUT.PUT_LINE('Parent already exists in database');
     
     -- Insert into database otherwise
     EXCEPTION
     WHEN NO_DATA_FOUND THEN
         INSERT INTO
-        "PARENT"(FIRST_NAME, LAST_NAME, ADDRESS, EMAIL, CONTACT_NUMBER, TYPE)
+        "PARENT"(FIRST_NAME, SURNAME, ADDRESS, EMAIL, CONTACT_NUMBER, TYPE)
         VALUES
             (name_first, name_last, prnt_addr, prnt_email, ph_num, prnt_type_id);
         COMMIT;
@@ -524,7 +524,7 @@ BEGIN
             -- Look up the primary key (person_id) for the name
             SELECT CHILD_ID INTO i_child_id
             FROM CHILD
-            WHERE (first_name || ' ' || last_name) = childArray(i);
+            WHERE (first_name || ' ' || SURNAME) = childArray(i);
 
             -- Insert into the attendance table
             INSERT INTO "CHILD_ATTENDANCE" (CHILD_ID, CLASS_ID, ARRIVAL, DEPARTURE) 
@@ -547,7 +547,7 @@ BEGIN
             -- Look up the primary key (person_id) for the name
             SELECT EMPLOYEE_ID INTO i_staff_id
             FROM EMPLOYEE
-            WHERE (first_name || ' ' || last_name) = staffArray(i);
+            WHERE (first_name || ' ' || SURNAME) = staffArray(i);
 
             -- Insert into the attendance table
             INSERT INTO "EMPLOYEE_ATTENDANCE" (EMPLOYEE_ID, CLASS_ID, ARRIVAL, DEPARTURE) 
@@ -588,9 +588,9 @@ CREATE OR REPLACE VIEW child_details AS
 SELECT
     c.CHILD_ID AS "Child ID",
     c.FIRST_NAME AS "Name (First)",
-    c.LAST_NAME AS "Name (Last)",
+    c.SURNAME AS "Name (Last)",
     c.PARENT_ID AS "Parent ID",
-    p.FIRST_NAME || ' ' || p.LAST_NAME AS "Parent Name",
+    p.FIRST_NAME || ' ' || p.SURNAME AS "Parent Name",
     c.DOB,
     disp_contact (c.EMERGENCY_CONTACT) AS "Emergency Contact"
 FROM
@@ -603,7 +603,7 @@ CREATE OR REPLACE VIEW parent_details AS
 SELECT
     p.PARENT_ID AS "Parent ID",
     p.FIRST_NAME AS "Name (First)",
-    p.LAST_NAME AS "Name (Last)",
+    p.SURNAME AS "Name (Last)",
     (SELECT COUNT(*) FROM CHILD c WHERE c.PARENT_ID = p.PARENT_ID) AS "Number of enrolled children",
     disp_addr(p.ADDRESS) AS "Address"
 FROM

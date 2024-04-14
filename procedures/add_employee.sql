@@ -19,12 +19,12 @@ BEGIN
     SELECT "EMPLOYEE_ID" INTO emp_id
     FROM "EMPLOYEE"
     WHERE "FIRST_NAME" = name_first AND
-     "LAST_NAME" = name_last;
+     "SURNAME" = name_last;
     DBMS_OUTPUT.PUT_LINE('Employee already exists in database, overwriting');
     
     UPDATE EMPLOYEE
     SET
-        FIRST_NAME = name_first, LAST_NAME = name_last,
+        FIRST_NAME = name_first, SURNAME = name_last,
         HIRE_DATE = date_hire, ADDRESS = emp_addr,
         EMAIL = emp_email, CONTACT_NUMBER = ph_num,
         SALARY = emp_salary
@@ -35,7 +35,7 @@ BEGIN
     EXCEPTION
     WHEN NO_DATA_FOUND THEN
         INSERT INTO
-        "EMPLOYEE"(FIRST_NAME, LAST_NAME, HIRE_DATE, ADDRESS, EMAIL, CONTACT_NUMBER, SALARY)
+        "EMPLOYEE"(FIRST_NAME, SURNAME, HIRE_DATE, ADDRESS, EMAIL, CONTACT_NUMBER, SALARY)
         VALUES
             (name_first, name_last, date_hire, emp_addr, emp_email, ph_num, emp_salary);
         COMMIT;

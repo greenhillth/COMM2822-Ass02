@@ -32,14 +32,14 @@ BEGIN
     SELECT "PARENT_ID" INTO prnt_id
     FROM "PARENT"
     WHERE "FIRST_NAME" = name_first AND
-     "LAST_NAME" = name_last;
+     "SURNAME" = name_last;
     DBMS_OUTPUT.PUT_LINE('Parent already exists in database');
     
     -- Insert into database otherwise
     EXCEPTION
     WHEN NO_DATA_FOUND THEN
         INSERT INTO
-        "PARENT"(FIRST_NAME, LAST_NAME, ADDRESS, EMAIL, CONTACT_NUMBER, TYPE)
+        "PARENT"(FIRST_NAME, SURNAME, ADDRESS, EMAIL, CONTACT_NUMBER, TYPE)
         VALUES
             (name_first, name_last, prnt_addr, prnt_email, ph_num, prnt_type_id);
         COMMIT;
