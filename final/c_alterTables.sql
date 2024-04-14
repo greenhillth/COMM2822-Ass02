@@ -634,7 +634,7 @@ SELECT table_name AS "Table",
 FROM user_tables
 ORDER BY "Number of rows";
 /
-
+/
 /*
     END ALTER SECTION
 */
